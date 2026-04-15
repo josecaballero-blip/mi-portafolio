@@ -161,6 +161,28 @@
         "title": "Reportes automáticos",
         "desc": "Genero dashboards y reportes que se crean solos con datos en tiempo real y se entregan por correo o Slack."
       }
+    },
+    "nodes": {
+      "webhook": {
+        "name": "Webhook",
+        "desc": "Punto de entrada del flujo. Recibe datos HTTP en tiempo real cuando ocurre un evento externo (nuevo lead, formulario, pago, etc.)."
+      },
+      "if": {
+        "name": "IF (Condicional)",
+        "desc": "Evalúa una condición sobre los datos recibidos. Si el lead tiene score mayor a 80, toma la ruta de alta prioridad; si no, lo registra para seguimiento."
+      },
+      "gmail": {
+        "name": "Gmail",
+        "desc": "Envía un email personalizado automáticamente al lead calificado con una propuesta o mensaje de bienvenida."
+      },
+      "sheets": {
+        "name": "Google Sheets",
+        "desc": "Registra los leads de baja prioridad en una hoja de cálculo para revisión manual o campañas de nurturing posteriores."
+      },
+      "slack": {
+        "name": "Slack",
+        "desc": "Notifica al equipo de ventas en un canal de Slack con los detalles del lead para que actúen de inmediato."
+      }
     }
   },
   "certifications": {

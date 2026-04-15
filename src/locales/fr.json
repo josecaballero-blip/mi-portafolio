@@ -149,6 +149,13 @@
       "integrations": { "title": "Intégrations API", "desc": "Je connecte n'importe quel service : CRMs, ERPs, bases de données, email, WhatsApp." },
       "bots": { "title": "Bots & Assistants", "desc": "Bots IA qui répondent aux requêtes et apprennent du contexte métier." },
       "reports": { "title": "Rapports automatiques", "desc": "Dashboards et rapports qui se créent seuls avec des données en temps réel." }
+    },
+    "nodes": {
+      "webhook": { "name": "Webhook", "desc": "Point d'entrée du flux. Reçoit des données HTTP en temps réel lors d'un événement externe (nouveau lead, formulaire, paiement, etc.)." },
+      "if": { "name": "IF (Conditionnel)", "desc": "Évalue une condition sur les données reçues. Si le lead a un score supérieur à 80, il prend la route prioritaire ; sinon, il est enregistré pour suivi." },
+      "gmail": { "name": "Gmail", "desc": "Envoie automatiquement un email personnalisé au lead qualifié avec une proposition ou un message de bienvenue." },
+      "sheets": { "name": "Google Sheets", "desc": "Enregistre les leads de faible priorité dans un tableur pour révision manuelle ou campagnes de nurturing." },
+      "slack": { "name": "Slack", "desc": "Notifie l'équipe commerciale dans un canal Slack avec les détails du lead pour une action immédiate." }
     }
   },
   "certifications": {

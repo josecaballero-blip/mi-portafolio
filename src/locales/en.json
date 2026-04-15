@@ -161,6 +161,28 @@
         "title": "Automatic reports",
         "desc": "I generate dashboards and reports that create themselves with real-time data and are delivered by email or Slack."
       }
+    },
+    "nodes": {
+      "webhook": {
+        "name": "Webhook",
+        "desc": "Entry point of the workflow. Receives real-time HTTP data when an external event occurs (new lead, form submission, payment, etc.)."
+      },
+      "if": {
+        "name": "IF (Conditional)",
+        "desc": "Evaluates a condition on received data. If the lead has a score above 80, it takes the high-priority route; otherwise, it's logged for follow-up."
+      },
+      "gmail": {
+        "name": "Gmail",
+        "desc": "Automatically sends a personalized email to the qualified lead with a proposal or welcome message."
+      },
+      "sheets": {
+        "name": "Google Sheets",
+        "desc": "Logs low-priority leads in a spreadsheet for manual review or subsequent nurturing campaigns."
+      },
+      "slack": {
+        "name": "Slack",
+        "desc": "Notifies the sales team in a Slack channel with lead details so they can act immediately."
+      }
     }
   },
   "certifications": {

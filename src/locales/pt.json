@@ -110,6 +110,13 @@
       "integrations": { "title": "Integrações API", "desc": "Conecto qualquer serviço: CRMs, ERPs, bancos de dados, email, WhatsApp." },
       "bots": { "title": "Bots & Assistentes", "desc": "Bots IA que respondem consultas e aprendem do contexto do negócio." },
       "reports": { "title": "Relatórios automáticos", "desc": "Dashboards e relatórios que se criam sozinhos com dados em tempo real." }
+    },
+    "nodes": {
+      "webhook": { "name": "Webhook", "desc": "Ponto de entrada do fluxo. Recebe dados HTTP em tempo real quando ocorre um evento externo (novo lead, formulário, pagamento, etc.)." },
+      "if": { "name": "IF (Condicional)", "desc": "Avalia uma condição sobre os dados recebidos. Se o lead tem score acima de 80, segue a rota de alta prioridade; senão, é registrado para acompanhamento." },
+      "gmail": { "name": "Gmail", "desc": "Envia automaticamente um email personalizado ao lead qualificado com uma proposta ou mensagem de boas-vindas." },
+      "sheets": { "name": "Google Sheets", "desc": "Registra leads de baixa prioridade em uma planilha para revisão manual ou campanhas de nurturing." },
+      "slack": { "name": "Slack", "desc": "Notifica a equipe de vendas em um canal Slack com detalhes do lead para ação imediata." }
     }
   },
   "certifications": {

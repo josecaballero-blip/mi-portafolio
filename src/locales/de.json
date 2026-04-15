@@ -110,6 +110,13 @@
       "integrations": { "title": "API-Integrationen", "desc": "Ich verbinde jeden Service: CRMs, ERPs, Datenbanken, E-Mail, WhatsApp." },
       "bots": { "title": "Bots & Assistenten", "desc": "KI-Bots, die Anfragen beantworten und aus dem Geschäftskontext lernen." },
       "reports": { "title": "Automatische Berichte", "desc": "Dashboards und Berichte, die sich mit Echtzeit-Daten selbst erstellen." }
+    },
+    "nodes": {
+      "webhook": { "name": "Webhook", "desc": "Einstiegspunkt des Workflows. Empfängt HTTP-Daten in Echtzeit bei einem externen Event (neuer Lead, Formular, Zahlung, etc.)." },
+      "if": { "name": "IF (Bedingung)", "desc": "Wertet eine Bedingung aus. Wenn der Lead einen Score über 80 hat, wird die Prioritätsroute genommen; andernfalls wird er zur Nachverfolgung gespeichert." },
+      "gmail": { "name": "Gmail", "desc": "Sendet automatisch eine personalisierte E-Mail an den qualifizierten Lead mit einem Angebot oder einer Willkommensnachricht." },
+      "sheets": { "name": "Google Sheets", "desc": "Speichert Leads mit niedriger Priorität in einer Tabelle zur manuellen Prüfung oder für Nurturing-Kampagnen." },
+      "slack": { "name": "Slack", "desc": "Benachrichtigt das Vertriebsteam in einem Slack-Kanal mit Lead-Details für sofortiges Handeln." }
     }
   },
   "certifications": {
