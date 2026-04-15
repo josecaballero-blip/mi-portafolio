@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { HiLightningBolt, HiCog, HiDocumentReport, HiUsers } from 'react-icons/hi'
+import { useTranslation } from 'react-i18next'
 import AnimatedTitle from './AnimatedTitle'
 
 /* ─── Tarjetas de servicio ─────────────────────────────────────────────── */
@@ -32,7 +33,7 @@ const CARDS = [
 ]
 
 /* ─── Tarjeta con tilt 3D ──────────────────────────────────────────────── */
-function TiltServiceCard({ card, index, inView }) {
+function TiltServiceCard({ card, index, inView, t }) {
   const Icon = card.icon
 
   return (
@@ -71,10 +72,10 @@ function TiltServiceCard({ card, index, inView }) {
 
           <div className="relative z-10">
             <h3 className="font-heading font-semibold text-text-primary text-sm mb-2">
-              {card.title}
+              {t(`automation.cards.${card.key}.title`)}
             </h3>
             <p className="text-text-muted text-xs leading-relaxed">
-              {card.description}
+              {t(`automation.cards.${card.key}.desc`)}
             </p>
           </div>
         </div>
@@ -85,6 +86,7 @@ function TiltServiceCard({ card, index, inView }) {
 
 export default function Automation() {
   const { ref, inView } = useInView({ threshold: 0.08, triggerOnce: true })
+  const { t } = useTranslation()
 
   return (
     <section
@@ -107,14 +109,12 @@ export default function Automation() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.3 }}
           >
-            <span className="section-tag">// automation.init()</span>
+            <span className="section-tag">{t('automation.tag')}</span>
             <AnimatedTitle className="section-title">
-              Automatización de <span className="accent-text">Procesos</span>
+              {t('automation.title1')}<span className="accent-text">{t('automation.title2')}</span>
             </AnimatedTitle>
             <p className="text-text-secondary text-base leading-relaxed mt-4 max-w-md">
-              Si un proceso se repite más de dos veces, se automatiza. Conecto APIs,
-              bases de datos y plataformas para que los flujos corran solos — sin
-              errores humanos y sin que nadie tenga que estar pendiente.
+              {t('automation.subtitle')}
             </p>
           </motion.div>
 
@@ -141,12 +141,12 @@ export default function Automation() {
             <div className="text-xs font-mono leading-7 select-none">
               {[
                 { parts: [{ text: 'trigger', cls: 'text-accent-violet' }, { text: ':  ', cls: 'text-text-muted' }, { text: '"nuevo_empleado"', cls: 'text-accent-cyan' }] },
-                { parts: [{ text: '  ↓', cls: 'text-white/40' }] },
+                { parts: [{ text: '  ↓', cls: 'text-text-muted' }] },
                 { parts: [{ text: 'acción', cls: 'text-accent-violet' }, { text: ':  crear cuenta corporativa', cls: 'text-text-muted' }] },
                 { parts: [{ text: 'acción', cls: 'text-accent-violet' }, { text: ':  enviar email de bienvenida', cls: 'text-text-muted' }] },
                 { parts: [{ text: 'acción', cls: 'text-accent-violet' }, { text: ':  generar documentos legales', cls: 'text-text-muted' }] },
                 { parts: [{ text: 'acción', cls: 'text-accent-violet' }, { text: ':  notificar al equipo RRHH', cls: 'text-text-muted' }] },
-                { parts: [{ text: '  ↓', cls: 'text-white/40' }] },
+                { parts: [{ text: '  ↓', cls: 'text-text-muted' }] },
                 { parts: [{ text: '✓ completado en 0.4s', cls: 'text-green-400' }] },
               ].map((line, i) => (
                 <motion.div
@@ -169,7 +169,7 @@ export default function Automation() {
         {/* Grid de tarjetas */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {CARDS.map((card, i) => (
-            <TiltServiceCard key={card.title} card={card} index={i} inView={inView} />
+            <TiltServiceCard key={card.key} card={card} index={i} inView={inView} t={t} />
           ))}
         </div>
       </div>

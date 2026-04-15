@@ -1,0 +1,278 @@
+{
+  "nav": {
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "automation": "Automation",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "cta": "Get in touch"
+  },
+  "hero": {
+    "badge": "Open to work · available now",
+    "greeting": "Hi, I'm",
+    "name": "Jose Caballero",
+    "subtitle1": "Software Developer & ",
+    "subtitle2": "Process Automation",
+    "description": "Software Developer with experience in full-stack development with React, Node.js and Python, AWS certified and specialized in automating business workflows with n8n and Make.com.",
+    "cta_projects": "View projects",
+    "cta_cv": "Download CV",
+    "scroll": "scroll",
+    "location": "Cartagena, Colombia",
+    "typewriter": ["React Developer", "Automation", "Full-Stack", "Cloud AWS"]
+  },
+  "about": {
+    "tag": "// about.me",
+    "title1": "About ",
+    "title2": "me",
+    "location": "Cartagena, Colombia",
+    "age": "21 years old",
+    "p1": "I'm <1>21 years old</1> and from Cartagena de Indias. From a young age I was interested in technology and began exploring software development on my own, which quickly became my passion.",
+    "p2": "I trained at <1>SENA</1> as a Software Analysis and Development Technologist, working on real projects with multidisciplinary teams that strengthened my technical and collaborative skills.",
+    "p3": "I'm motivated by building solutions that optimize processes and generate real impact on people's productivity. That's what drives my continuous growth and learning.",
+    "h1": "Full-Stack Developer",
+    "h1_desc": "I work with React, Node.js and Python to build complete applications, from frontend to database.",
+    "h2": "Automation",
+    "h2_desc": "I'm passionate about automating processes with n8n and Make.com so companies stop wasting time on repetitive tasks.",
+    "h3": "Always learning",
+    "h3_desc": "AWS certified, always looking for new technologies and better ways to solve real problems."
+  },
+  "stats": {
+    "projects": "Projects delivered",
+    "experience": "Months of Experience",
+    "certs": "AWS Certifications",
+    "tools": "Automation tools"
+  },
+  "skills": {
+    "tag": "// tech_stack.json",
+    "title1": "My ",
+    "title2": "tech",
+    "title3": " stack",
+    "subtitle": "Tools I build with daily — click any to see what I do with it.",
+    "viewMore": "see more",
+    "close": "Close",
+    "cats": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Cloud & DevOps": "Cloud & DevOps",
+      "Datos": "Data",
+      "Automatización": "Automation",
+      "Herramientas": "Tools"
+    },
+    "descs": {
+      "JavaScript": "My main language. I handle ES6+, async/await, destructuring, modules and DOM manipulation to create dynamic and efficient web applications.",
+      "HTML5": "Semantic structure, accessibility, advanced forms, on-page SEO and best practices to create solid foundations for any web project.",
+      "CSS3": "Flexbox, Grid, animations, custom properties and media queries. I build complex responsive layouts without relying on frameworks.",
+      "React": "I build SPAs and interactive interfaces with React. I manage hooks, context, global state and componentization to create fast and maintainable user experiences.",
+      "Next.js": "SSR, SSG, API routes and image optimization. I use Next.js for projects that need SEO, performance and Vercel deployment.",
+      "Tailwind CSS": "I build responsive interfaces with utility-first CSS. I use custom design tokens, dark mode and reusable components without leaving HTML.",
+      "Framer Motion": "Declarative animations in React: layout transitions, gestures, scroll animations and micro-interactions that bring interfaces to life.",
+      "Vite": "Ultra-fast build tool with instant HMR. I use it as bundler for all my React projects, with plugin configuration and production optimization.",
+      "Vue.js": "I develop reactive interfaces with Vue.js. I handle Composition API, reactivity, custom directives and ecosystem (Vue Router, Pinia) to create scalable SPAs.",
+      "Python": "I develop automation scripts, APIs with Flask and data processing. I use it to connect services, generate reports and handle business logic.",
+      "Node.js": "I create servers and REST APIs with Express. I handle JWT authentication, middleware, database connections and production deployment.",
+      "APIs REST": "I design and consume RESTful endpoints. I document with Postman, handle status codes, pagination, filters and token authentication.",
+      "AWS": "Amazon cloud services: EC2, S3, RDS, Lambda and IAM. I have 4 AWS certifications validating my knowledge in cloud architecture, databases and generative AI.",
+      "Docker": "Application containerization with Docker. I create images, configure docker-compose for multi-service environments and manage reproducible deployments.",
+      "SQL": "I design normalized schemas, write optimized queries, manage table relationships and use JOINs, views and stored procedures.",
+      "MongoDB": "I work with non-relational databases like MongoDB. I design collections, embedded documents, indexes and queries with aggregation pipelines.",
+      "Supabase": "I use Supabase as backend-as-a-service: authentication, real-time Postgres database, storage and edge functions without setting up my own infrastructure.",
+      "n8n": "I build workflows with triggers, webhooks, HTTP nodes and conditional logic. I connect apps to automate processes without writing code.",
+      "Make.com": "I create multi-module scenarios to sync data between platforms, schedule executions and handle errors with alternative routes.",
+      "Claude / IA": "I use AI models to generate code, automate repetitive tasks, do advanced prompting and create intelligent assistants integrated into workflows.",
+      "Figma": "I design wireframes, interactive prototypes and design systems. I work with auto-layout, components and variables to deliver development-ready specs.",
+      "WordPress": "I set up WordPress sites, customize themes, configure plugins, optimize SEO and manage content for clients who need autonomy on their web.",
+      "Git / GitHub": "Version control with Git, I manage branches, pull requests, merge conflicts and collaborative workflow on GitHub with basic CI.",
+      "Postman": "I test and document APIs with Postman. I create collections, environment variables, automated tests and generate documentation for the team.",
+      "Stitch": "I use Stitch to design visual components and extract design tokens that I implement directly in code, speeding up the design-to-production step."
+    }
+  },
+  "projects": {
+    "tag": "// projects.map()",
+    "title1": "Real ",
+    "title2": "projects",
+    "subtitle": "Each project was a real solution for a real client. These aren't tutorial exercises — they're systems in production generating value.",
+    "viewProject": "View project",
+    "close": "Close",
+    "context": "Context",
+    "story": "The story",
+    "details": "In detail",
+    "impact": "Impact",
+    "features": "Key features",
+    "items": {
+      "rrhh": {
+        "title": "HR Automation",
+        "description": "HR automation pipeline: paperless onboarding, contract generation via API and auto-delivered reports.",
+        "context": "Internship · SENA",
+        "story": "I developed this project during my internship at SENA. The HR department had a 100% manual onboarding process: paper forms, handmade Word contracts and weekly Excel reports. I proposed automating the entire flow and was given free rein to implement it.",
+        "longDesc": "I built an n8n pipeline that receives new employee data from a web form, generates the contract in PDF with dynamic fields, sends it by email to the signer and automatically updates a tracking dashboard. I also created weekly reports that auto-generate with Python and are delivered directly to the HR manager's inbox.",
+        "impact": "Reduced onboarding time from 3 days to 15 minutes. The HR team stopped doing repetitive work and could focus on what matters. It was my first real project delivered to an institutional client.",
+        "features": ["Paperless automated onboarding", "Dynamic PDF contract generation", "Auto-generated weekly reports", "Real-time tracking dashboard", "Automatic email notifications"]
+      },
+      "optica": {
+        "title": "Optical Shop Online",
+        "description": "Full-stack app for optical shop: interactive catalog, appointment booking with real-time validation and admin dashboard with sales metrics.",
+        "context": "Client project · Cartagena",
+        "story": "A client who owned an optical shop in Cartagena contacted me because he needed to digitize his business. Everything was in notebooks: inventory, appointments, client data. I proposed a complete web app and he liked the idea. It was my first project sold as a freelancer.",
+        "longDesc": "I developed the frontend in React with an interactive catalog where customers can view lenses with filters by brand, price and type. The appointment system validates availability in real-time and sends reminders. The admin panel has sales metrics, inventory management and data export.",
+        "impact": "The client went from writing everything in notebooks to having a digitized business. Appointment errors decreased, inventory manages itself and sales can be viewed in charts from his phone.",
+        "features": ["Lens catalog with filters", "Real-time appointment booking", "Admin dashboard with sales metrics", "Complete inventory management", "Data export and reports"]
+      },
+      "discoteca": {
+        "title": "Nightclub & Events",
+        "description": "Booking platform for nightlife: VIP sections, tables, real-time capacity control and event management with admin panel.",
+        "context": "Client project · Cartagena",
+        "story": "A bar-nightclub owner contacted me because he wanted a system to manage bookings and events. He used to do everything via WhatsApp and bookings always got mixed up. I built a complete platform where his clients book directly and he controls everything from a panel.",
+        "longDesc": "The platform handles table and VIP section bookings with real-time availability logic. It has an events module where parties are created, DJs assigned, capacity defined and entry tracking enabled. The control panel shows staff the night's occupancy, VIP client history and event reports.",
+        "impact": "Bookings no longer get mixed up. Clients book from the web without calling, and staff has all info in one place. The owner says he now manages three times more events without getting lost.",
+        "features": ["Online table & VIP booking", "Real-time capacity control", "Event creation module", "Staff panel with occupancy view", "VIP client history & reports"]
+      },
+      "veterinaria": {
+        "title": "Veterinary Clinic",
+        "description": "Clinical web system for veterinary: appointment scheduling, medical history per patient, prescriptions and exclusive panel for medical staff.",
+        "context": "Client project · Cartagena",
+        "story": "A veterinary clinic in Cartagena asked me for a system to manage their patient consultations. They had paper files, appointments on a wall calendar and prescriptions written by hand. I built them a complete clinical web system designed for veterinarians to use during consultations.",
+        "longDesc": "The system has full CRUD with relationships between patients (pets), owners, appointments and treatments. I built the backend in Python with Flask, well-documented REST endpoints and a normalized SQL database. The React frontend has a UX flow designed for the vet to record the consultation in real-time while attending the patient.",
+        "impact": "Veterinarians stopped searching through file folders. Now they have the entire history one click away, appointments organize themselves and prescriptions are generated digitally. The clinic serves more patients in less time.",
+        "features": ["Digital pet records", "Complete medical history per patient", "Smart appointment scheduling", "Digital prescriptions", "Exclusive panel for veterinarians"]
+      }
+    }
+  },
+  "automation": {
+    "tag": "// automation.run()",
+    "title1": "Intelligent ",
+    "title2": "automation",
+    "subtitle": "I don't just build websites. I connect systems, automate workflows and eliminate repetitive tasks so companies can focus on what matters.",
+    "code_tab": "automation.js",
+    "cards": {
+      "flows": {
+        "title": "Automated workflows",
+        "desc": "I design end-to-end pipelines that connect apps, process data and execute actions without human intervention."
+      },
+      "integrations": {
+        "title": "API Integrations",
+        "desc": "I connect any service with any other: CRMs, ERPs, databases, email, WhatsApp and more."
+      },
+      "bots": {
+        "title": "Bots & Assistants",
+        "desc": "I create AI bots that answer queries, process requests and learn from the business context."
+      },
+      "reports": {
+        "title": "Automatic reports",
+        "desc": "I generate dashboards and reports that create themselves with real-time data and are delivered by email or Slack."
+      }
+    }
+  },
+  "certifications": {
+    "tag": "// certifications.verified()",
+    "title1": "Education & ",
+    "title2": "Certifications",
+    "subtitle": "Each certificate is the result of real study hours. I don't collect badges — I master what I certify.",
+    "education_title": "Academic background",
+    "edu": {
+      "degree": {
+        "title": "Software Analysis and Development Technologist",
+        "place": "SENA — National Learning Service",
+        "period": "2023 – 2025 · Cartagena, Colombia"
+      },
+      "bachillerato": {
+        "title": "High School Diploma",
+        "place": "Institución Educativa Soledad Acosta de Samper",
+        "period": "2018 – 2023 · Cartagena, Colombia"
+      }
+    },
+    "download_diploma": "View diploma",
+    "sennova_title": "SENNOVA Research",
+    "sennova_desc": "I participated as a research assistant in SENA's SENNOVA program, working on applied technological innovation projects. I developed functional prototypes and technical documentation for automation solutions that impacted internal processes at the training center.",
+    "sennova_tags": ["Innovation", "Research", "Prototypes", "Automation"],
+    "aws_section_title": "AWS Certifications",
+    "download_cert": "View certificate",
+    "certs": {
+      "technical": {
+        "title": "AWS Technical Essentials",
+        "issuer": "Amazon Web Services",
+        "desc": "Cloud infrastructure fundamentals: EC2, S3, VPC, IAM and architecture best practices."
+      },
+      "cloud": {
+        "title": "AWS Cloud Practitioner",
+        "issuer": "Amazon Web Services",
+        "desc": "Comprehensive understanding of AWS cloud: service models, pricing, security and enterprise use cases."
+      },
+      "database": {
+        "title": "AWS Database Offerings",
+        "issuer": "Amazon Web Services",
+        "desc": "AWS database services: RDS, DynamoDB, Aurora, Redshift and migration strategies."
+      },
+      "ai": {
+        "title": "AWS Generative AI",
+        "issuer": "Amazon Web Services",
+        "desc": "Generative AI on AWS: Amazon Bedrock, foundation models, prompt engineering and use cases."
+      }
+    }
+  },
+  "contact": {
+    "tag": "// contact.send()",
+    "title1": "Let's talk about your ",
+    "title2": "project",
+    "title3": "?",
+    "subtitle": "Tell me what you need and I'll get back to you in less than 24 hours. No commitment, no fine print.",
+    "form": {
+      "name": "Your name *",
+      "email": "your@email.com *",
+      "phone": "Phone (optional)",
+      "service": "What do you need?",
+      "service_web": "Web development",
+      "service_auto": "Automation",
+      "service_api": "API Integration",
+      "service_consult": "Technical consulting",
+      "service_other": "Other",
+      "budget": "Estimated budget",
+      "budget_basic": "Less than $500 USD",
+      "budget_mid": "$500 – $2,000 USD",
+      "budget_high": "$2,000 – $5,000 USD",
+      "budget_premium": "More than $5,000 USD",
+      "message": "Tell me about your project... *",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent!",
+      "error": "Error sending"
+    },
+    "links": {
+      "title": "Connect with me",
+      "subtitle": "I reply within 24h. If urgent, message me on WhatsApp.",
+      "tip_title": "Tip",
+      "tip_text": "Not sure what to write? Just tell me how I can help and we'll figure it out together. No strings attached.",
+      "email_label": "Direct email",
+      "phone_label": "Phone",
+      "whatsapp_label": "WhatsApp",
+      "linkedin_label": "LinkedIn",
+      "github_label": "GitHub"
+    }
+  },
+  "footer": {
+    "description": "Software Developer from Cartagena, Colombia. I build web applications and automate processes so businesses can grow and stop wasting time.",
+    "nav_title": "Navigation",
+    "services_title": "Services",
+    "services": ["Full-Stack Web Development", "Process Automation", "Custom Applications", "Technical Consulting", "Cloud & DevOps (AWS)"],
+    "contact_title": "Contact",
+    "phone_label": "Phone",
+    "whatsapp_action": "Send message",
+    "location_label": "Location",
+    "rights": "All rights reserved.",
+    "made_with": "Made with",
+    "in_city": "in Cartagena"
+  },
+  "cta": {
+    "emoji": "🚀",
+    "title": "Do you have a project in mind?",
+    "subtitle": "Let's talk about how I can help you turn your idea into reality. From automation to full web development.",
+    "btn_talk": "Let's talk",
+    "btn_whatsapp": "💬 Direct WhatsApp"
+  },
+  "whatsapp": {
+    "tooltip": "Chat on WhatsApp?"
+  },
+  "lang": {
+    "label": "EN"
+  }
+}

@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Theme Variables ───────────────────────────────────────────────────── */
+:root {
+  --bg-primary:    #080812;
+  --bg-secondary:  #0f0f1a;
+  --bg-card:       #13131e;
+  --bg-card-alt:   #1a1a2a;
+  --text-primary:  #e2e8f0;
+  --text-secondary:#94a3b8;
+  --text-muted:    #475569;
+  --scrollbar-track: #0f0f1a;
+  --scrollbar-thumb: rgba(0,212,255,0.3);
+  --scrollbar-hover: rgba(0,212,255,0.55);
+  --border-base:   rgba(255,255,255,0.07);
+  --border-hover:  rgba(255,255,255,0.13);
+  --glass-bg:      rgba(255,255,255,0.04);
+  --glass-border:  rgba(255,255,255,0.08);
+  --card-shadow:   0 4px 24px rgba(0,0,0,0.45);
+  --card-shadow-hover: 0 10px 48px rgba(0,0,0,0.65);
+}
+
 /* ─── Reset & Base ──────────────────────────────────────────────────────── */
 @layer base {
   *, *::before, *::after {
@@ -15,18 +35,19 @@
   }
 
   body {
-    background-color: #080812;
-    color: #e2e8f0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   /* Scrollbar personalizada */
   ::-webkit-scrollbar        { width: 5px; }
-  ::-webkit-scrollbar-track  { background: #0f0f1a; }
-  ::-webkit-scrollbar-thumb  { background: rgba(0,212,255,0.3); border-radius: 4px; }
-  ::-webkit-scrollbar-thumb:hover { background: rgba(0,212,255,0.55); }
+  ::-webkit-scrollbar-track  { background: var(--scrollbar-track); }
+  ::-webkit-scrollbar-thumb  { background: var(--scrollbar-thumb); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); }
 }
 
 /* ─── Componentes reutilizables ─────────────────────────────────────────── */
@@ -52,7 +73,7 @@
 
   .btn-secondary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
-      border border-white/10 text-text-primary font-semibold text-sm
+      border border-[var(--border-base)] text-text-primary font-semibold text-sm
       transition-all duration-200
       hover:scale-[1.04] hover:border-accent-cyan/40 hover:bg-accent-cyan/[0.06]
       active:scale-[0.97];
@@ -60,17 +81,22 @@
 
   /* Card base */
   .card {
-    @apply bg-bg-card border border-white/[0.07] rounded-2xl
-      transition-all duration-300;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-base);
+    @apply rounded-2xl transition-all duration-300;
+    box-shadow: var(--card-shadow);
   }
 
   .card:hover {
-    @apply border-white/[0.13] shadow-card-hover;
+    border-color: var(--border-hover);
+    box-shadow: var(--card-shadow-hover);
   }
 
   /* Glassmorphism */
   .glass {
-    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.08];
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    @apply backdrop-blur-xl;
   }
 
   /* Texto con gradiente acento */

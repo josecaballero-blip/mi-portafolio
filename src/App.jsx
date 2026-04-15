@@ -4,6 +4,7 @@ import AboutMe        from './components/AboutMe'
 import Stats          from './components/Stats'
 import Skills         from './components/Skills'
 import Projects       from './components/Projects'
+import CTABanner      from './components/CTABanner'
 import Automation     from './components/Automation'
 import Certifications from './components/Certifications'
 import Contact        from './components/Contact'
@@ -45,6 +46,9 @@ export default function App() {
 
         {/* Proyectos */}
         <Projects />
+
+        {/* CTA */}
+        <CTABanner />
 
         {/* Automatización */}
         <Automation />

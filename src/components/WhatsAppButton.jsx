@@ -2,8 +2,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { BsWhatsapp } from 'react-icons/bs'
 import { HiX } from 'react-icons/hi'
+import { useTranslation } from 'react-i18next'
 
 export default function WhatsAppButton() {
+  const { t } = useTranslation()
   const [show, setShow] = useState(false)
   const [tooltip, setTooltip] = useState(true)
 
@@ -43,7 +45,7 @@ export default function WhatsAppButton() {
                   <HiX className="text-gray-600 text-[10px]" />
                 </button>
                 <p className="text-gray-800 text-xs font-medium leading-relaxed">
-                  ¿Necesitas ayuda? Escríbeme por WhatsApp 👋
+                  {t('whatsapp.tooltip')}
                 </p>
                 {/* Flecha */}
                 <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-white rotate-45" />

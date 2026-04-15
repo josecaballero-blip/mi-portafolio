@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import anime from 'animejs/lib/anime.es.js'
+import { useTranslation } from 'react-i18next'
 
-/* ─── Datos de métricas ─────────────────────────────────────────────────── */
 const STATS = [
-  { value: 4,  suffix: '+', label: 'Proyectos entregados'          },
-  { value: 6,  suffix: '',  label: 'Meses de Experiencia'            },
-  { value: 4,  suffix: '',  label: 'Certificaciones AWS'            },
-  { value: 3,  suffix: '',  label: 'Herramientas de automatización' },
+  { value: 4,  suffix: '+', key: 'projects'   },
+  { value: 6,  suffix: '',  key: 'experience'  },
+  { value: 4,  suffix: '',  key: 'certs'       },
+  { value: 3,  suffix: '',  key: 'tools'       },
 ]
 
 /* Contador animado con requestAnimationFrame (1 rAF por counter, no setInterval) */
@@ -42,6 +42,7 @@ function CountUp({ target, suffix, isActive }) {
 
 export default function Stats() {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true })
+  const { t } = useTranslation()
   const gridRef = useRef(null)
   const animeRan = useRef(false)
 
@@ -61,17 +62,17 @@ export default function Stats() {
   }, [inView])
 
   return (
-    <section ref={ref} className="py-16 border-y border-white/[0.06] bg-bg-primary/60 backdrop-blur-sm">
+    <section ref={ref} className="py-16 border-y border-[var(--border-base)] bg-bg-primary/60 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div ref={gridRef} className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-4">
           {STATS.map((stat, i) => (
             <div
-              key={stat.label}
+              key={stat.key}
               className="stat-item flex flex-col items-center text-center gap-2"
               style={{ opacity: 0 }}
             >
               <CountUp target={stat.value} suffix={stat.suffix} isActive={inView} />
-              <span className="text-text-muted text-sm leading-snug">{stat.label}</span>
+              <span className="text-text-muted text-sm leading-snug">{t(`stats.${stat.key}`)}</span>
             </div>
           ))}
         </div>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 import { Link } from 'react-scroll'
 import { HiArrowRight, HiDownload, HiLocationMarker } from 'react-icons/hi'
+import { useTranslation } from 'react-i18next'
 
 /* ─── Variantes de animación ─────────────────────────────────────────────── */
 const containerVariants = {
@@ -15,6 +16,7 @@ const itemVariants = {
 }
 
 export default function Hero() {
+  const { t } = useTranslation()
   return (
     <section
       id="hero"
@@ -30,10 +32,10 @@ export default function Hero() {
       />
       {/* Grid sutil */}
       <div
-        className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        className="absolute inset-0 opacity-[0.025] dark:opacity-[0.025] pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)',
+            'linear-gradient(var(--border-base) 1px, transparent 1px), linear-gradient(90deg, var(--border-base) 1px, transparent 1px)',
           backgroundSize: '56px 56px',
         }}
       />
@@ -54,7 +56,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
               </span>
-              Open to work · disponible ahora
+              {t('hero.badge')}
             </span>
           </motion.div>
 
@@ -77,8 +79,8 @@ export default function Hero() {
                 onInit={(tw) => {
                   tw
                     .pauseFor(600)
-                    .typeString('Desarrollador de Software & ')
-                    .typeString('<span style="color:#00d4ff">Automatización de Procesos</span>')
+                    .typeString(t('hero.subtitle1'))
+                    .typeString(`<span style="color:#00d4ff">${t('hero.subtitle2')}</span>`)
                     .start()
                 }}
                 options={{ delay: 38, cursor: '|' }}
@@ -87,22 +89,20 @@ export default function Hero() {
 
             {/* Descripción */}
             <p className="text-text-secondary text-base leading-relaxed max-w-md mt-1">
-              Desarrollador de Software con experiencia en desarrollo full-stack
-              con React, Node.js y Python, certificado en AWS y especializado en
-              automatizar flujos empresariales con n8n y Make.com.
+              {t('hero.description')}
             </p>
 
             {/* Botones de acción */}
             <div className="flex flex-wrap gap-3 mt-2">
               <Link to="proyectos" smooth duration={600} offset={-64}>
                 <button className="btn-primary">
-                  Ver proyectos
+                  {t('hero.cta_projects')}
                   <HiArrowRight size={15} />
                 </button>
               </Link>
               <a href="/HV_Jose_Caballero.pdf" download className="btn-secondary">
                 <HiDownload size={15} />
-                Descargar CV
+                {t('hero.cta_cv')}
               </a>
             </div>
           </motion.div>
@@ -158,7 +158,7 @@ export default function Hero() {
             >
               <HiLocationMarker size={13} className="text-accent-cyan flex-shrink-0" />
               <span className="text-text-secondary text-xs font-medium whitespace-nowrap">
-                Cartagena, Colombia
+                {t('hero.location')}
               </span>
             </motion.div>
           </div>
@@ -172,7 +172,7 @@ export default function Hero() {
         transition={{ delay: 0.8, duration: 0.3 }}
         className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none"
       >
-        <span className="text-text-muted text-[10px] font-mono tracking-widest uppercase">scroll</span>
+        <span className="text-text-muted text-[10px] font-mono tracking-widest uppercase">{t('hero.scroll')}</span>
         <div className="w-px h-8 bg-gradient-to-b from-text-muted/60 to-transparent animate-bounce" />
       </motion.div>
     </section>

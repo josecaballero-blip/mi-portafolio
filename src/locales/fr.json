@@ -1,0 +1,246 @@
+{
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "automation": "Automatisation",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "cta": "Me contacter"
+  },
+  "hero": {
+    "badge": "Open to work · disponible maintenant",
+    "greeting": "Bonjour, je suis",
+    "name": "Jose Caballero",
+    "subtitle1": "Développeur logiciel & ",
+    "subtitle2": "Automatisation des processus",
+    "description": "Développeur logiciel avec expérience en développement full-stack avec React, Node.js et Python, certifié AWS et spécialisé dans l'automatisation des flux d'affaires avec n8n et Make.com.",
+    "cta_projects": "Voir les projets",
+    "cta_cv": "Télécharger CV",
+    "scroll": "défiler",
+    "location": "Carthagène, Colombie",
+    "typewriter": ["React Developer", "Automatisation", "Full-Stack", "Cloud AWS"]
+  },
+  "about": {
+    "tag": "// a.propos",
+    "title1": "À propos de ",
+    "title2": "moi",
+    "location": "Carthagène, Colombie",
+    "age": "21 ans",
+    "p1": "J'ai <1>21 ans</1> et je viens de Carthagène des Indes. Dès mon jeune âge, je me suis intéressé à la technologie et j'ai commencé à explorer le développement logiciel par moi-même, ce qui est vite devenu ma passion.",
+    "p2": "Je me suis formé au <1>SENA</1> en tant que Technologue en Analyse et Développement de Logiciels, travaillant sur des projets réels avec des équipes multidisciplinaires qui ont renforcé mes compétences techniques et collaboratives.",
+    "p3": "Je suis motivé par la construction de solutions qui optimisent les processus et génèrent un impact réel sur la productivité des personnes. C'est ce qui anime ma croissance et mon apprentissage continu.",
+    "h1": "Développeur Full-Stack",
+    "h1_desc": "Je travaille avec React, Node.js et Python pour construire des applications complètes, du frontend à la base de données.",
+    "h2": "Automatisation",
+    "h2_desc": "Je suis passionné par l'automatisation des processus avec n8n et Make.com pour que les entreprises cessent de perdre du temps sur des tâches répétitives.",
+    "h3": "Toujours en apprentissage",
+    "h3_desc": "Certifié AWS, toujours à la recherche de nouvelles technologies et de meilleures façons de résoudre des problèmes réels."
+  },
+  "stats": {
+    "projects": "Projets livrés",
+    "experience": "Mois d'expérience",
+    "certs": "Certifications AWS",
+    "tools": "Outils d'automatisation"
+  },
+  "skills": {
+    "tag": "// tech_stack.json",
+    "title1": "Mon ",
+    "title2": "stack",
+    "title3": " technique",
+    "subtitle": "Outils avec lesquels je construis au quotidien — cliquez sur n'importe lequel pour voir ce que j'en fais.",
+    "viewMore": "en savoir plus",
+    "close": "Fermer",
+    "cats": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Cloud & DevOps": "Cloud & DevOps",
+      "Datos": "Données",
+      "Automatización": "Automatisation",
+      "Herramientas": "Outils"
+    },
+    "descs": {
+      "JavaScript": "Mon langage principal. Je maîtrise ES6+, async/await, destructuring, modules et manipulation du DOM pour créer des applications web dynamiques.",
+      "HTML5": "Structure sémantique, accessibilité, formulaires avancés, SEO on-page et bonnes pratiques.",
+      "CSS3": "Flexbox, Grid, animations, propriétés personnalisées et media queries. Layouts complexes et responsive.",
+      "React": "Je construis des SPAs et des interfaces interactives avec React. Hooks, context, état global et componentisation.",
+      "Next.js": "SSR, SSG, routes API et optimisation des images. Pour les projets nécessitant SEO et performance.",
+      "Tailwind CSS": "Interfaces responsive avec CSS utility-first. Tokens de design personnalisés et composants réutilisables.",
+      "Framer Motion": "Animations déclaratives en React : transitions de layout, gestes et micro-interactions.",
+      "Vite": "Outil de build ultra-rapide avec HMR instantané. Bundler pour tous mes projets React.",
+      "Vue.js": "Interfaces réactives avec Vue.js. Composition API, réactivité et écosystème complet.",
+      "Python": "Scripts d'automatisation, APIs avec Flask et traitement de données.",
+      "Node.js": "Serveurs et APIs REST avec Express. Authentification JWT, middleware et déploiement.",
+      "APIs REST": "Conception et consommation d'endpoints RESTful. Documentation avec Postman.",
+      "AWS": "Services cloud Amazon : EC2, S3, RDS, Lambda et IAM. 4 certifications AWS.",
+      "Docker": "Conteneurisation avec Docker. Images, docker-compose et déploiements reproductibles.",
+      "SQL": "Schémas normalisés, requêtes optimisées, relations entre tables et procédures stockées.",
+      "MongoDB": "Bases de données non relationnelles. Collections, documents imbriqués et pipelines d'agrégation.",
+      "Supabase": "Backend-as-a-service : authentification, Postgres en temps réel, storage et edge functions.",
+      "n8n": "Flux de travail avec triggers, webhooks et logique conditionnelle. Automatisation sans code.",
+      "Make.com": "Scénarios multi-modules pour synchroniser les données et gérer les erreurs.",
+      "Claude / IA": "Modèles IA pour générer du code, automatiser et créer des assistants intelligents.",
+      "Figma": "Wireframes, prototypes interactifs et systèmes de design.",
+      "WordPress": "Sites WordPress, thèmes personnalisés, plugins et gestion de contenu.",
+      "Git / GitHub": "Contrôle de version avec Git, branches, pull requests et workflow collaboratif.",
+      "Postman": "Tests et documentation d'APIs. Collections et tests automatisés.",
+      "Stitch": "Composants visuels et tokens de design pour accélérer la production."
+    }
+  },
+  "projects": {
+    "tag": "// projets.map()",
+    "title1": "Projets ",
+    "title2": "réels",
+    "subtitle": "Chaque projet est une solution réelle pour un vrai client. Ce sont des systèmes en production qui génèrent de la valeur.",
+    "viewProject": "Voir le projet",
+    "close": "Fermer",
+    "context": "Contexte",
+    "story": "L'histoire",
+    "details": "En détail",
+    "impact": "Impact",
+    "features": "Fonctionnalités clés",
+    "items": {
+      "rrhh": {
+        "title": "Automatisation RH",
+        "description": "Pipeline d'automatisation RH : onboarding sans papier, génération de contrats et rapports automatiques.",
+        "context": "Stage · SENA",
+        "story": "J'ai développé ce projet pendant mon stage au SENA. Le département RH avait un processus 100% manuel.",
+        "longDesc": "J'ai construit un pipeline n8n qui reçoit les données, génère le contrat en PDF, l'envoie par email et met à jour un dashboard.",
+        "impact": "Temps d'onboarding réduit de 3 jours à 15 minutes.",
+        "features": ["Onboarding automatisé sans papier", "Génération dynamique de contrats PDF", "Rapports hebdomadaires auto-générés", "Dashboard de suivi en temps réel", "Notifications automatiques par email"]
+      },
+      "optica": {
+        "title": "Boutique Optique en ligne",
+        "description": "Application full-stack pour opticien : catalogue interactif, réservation de rendez-vous et dashboard admin.",
+        "context": "Projet client · Carthagène",
+        "story": "Un client propriétaire d'un magasin d'optique m'a contacté pour digitaliser son commerce.",
+        "longDesc": "Frontend React avec catalogue interactif, système de rendez-vous en temps réel et panneau d'administration.",
+        "impact": "Le client est passé des cahiers au numérique complet.",
+        "features": ["Catalogue de lentilles avec filtres", "Réservation en temps réel", "Dashboard admin avec métriques de ventes", "Gestion complète d'inventaire", "Export de données et rapports"]
+      },
+      "discoteca": {
+        "title": "Discothèque & Événements",
+        "description": "Plateforme de réservation pour vie nocturne : espaces VIP, contrôle de capacité et gestion d'événements.",
+        "context": "Projet client · Carthagène",
+        "story": "Le propriétaire d'un bar-discothèque cherchait un système pour gérer les réservations.",
+        "longDesc": "La plateforme gère les réservations avec logique de disponibilité en temps réel et module d'événements.",
+        "impact": "Plus de réservations croisées. Les clients réservent en ligne et le staff a tout en un seul endroit.",
+        "features": ["Réservation en ligne tables & VIP", "Contrôle de capacité en temps réel", "Module de création d'événements", "Panneau staff avec vue d'occupation", "Historique clients VIP & rapports"]
+      },
+      "veterinaria": {
+        "title": "Clinique Vétérinaire",
+        "description": "Système clinique web : agenda de rendez-vous, historique médical, prescriptions et panneau pour le personnel médical.",
+        "context": "Projet client · Carthagène",
+        "story": "Une clinique vétérinaire m'a demandé un système pour gérer les consultations de ses patients.",
+        "longDesc": "Système CRUD complet avec relations entre patients, propriétaires, rendez-vous et traitements.",
+        "impact": "Les vétérinaires ont tout l'historique en un clic. La clinique traite plus de patients en moins de temps.",
+        "features": ["Fiches numériques par animal", "Historique médical complet", "Agenda de rendez-vous intelligente", "Prescriptions numériques", "Panneau exclusif pour vétérinaires"]
+      }
+    }
+  },
+  "automation": {
+    "tag": "// automatisation.run()",
+    "title1": "Automatisation ",
+    "title2": "intelligente",
+    "subtitle": "Je ne fais pas que des sites web. Je connecte des systèmes, j'automatise des flux et j'élimine les tâches répétitives.",
+    "code_tab": "automatisation.js",
+    "cards": {
+      "flows": { "title": "Flux automatisés", "desc": "Pipelines end-to-end qui connectent les apps et exécutent des actions sans intervention humaine." },
+      "integrations": { "title": "Intégrations API", "desc": "Je connecte n'importe quel service : CRMs, ERPs, bases de données, email, WhatsApp." },
+      "bots": { "title": "Bots & Assistants", "desc": "Bots IA qui répondent aux requêtes et apprennent du contexte métier." },
+      "reports": { "title": "Rapports automatiques", "desc": "Dashboards et rapports qui se créent seuls avec des données en temps réel." }
+    }
+  },
+  "certifications": {
+    "tag": "// certifications.verified()",
+    "title1": "Formation & ",
+    "title2": "Certifications",
+    "subtitle": "Chaque certificat est le fruit d'heures d'étude réelles. Je ne collectionne pas les badges — je maîtrise ce que je certifie.",
+    "education_title": "Formation académique",
+    "edu": {
+      "degree": {
+        "title": "Technologue en Analyse et Développement de Logiciels",
+        "place": "SENA — Service National d'Apprentissage",
+        "period": "2023 – 2025 · Carthagène, Colombie"
+      },
+      "bachillerato": {
+        "title": "Baccalauréat",
+        "place": "Institución Educativa Soledad Acosta de Samper",
+        "period": "2018 – 2023 · Carthagène, Colombie"
+      }
+    },
+    "download_diploma": "Voir le diplôme",
+    "sennova_title": "Recherche SENNOVA",
+    "sennova_desc": "J'ai participé comme assistant de recherche dans le programme SENNOVA du SENA, travaillant sur des projets d'innovation technologique appliquée.",
+    "sennova_tags": ["Innovation", "Recherche", "Prototypes", "Automatisation"],
+    "aws_section_title": "Certifications AWS",
+    "download_cert": "Voir le certificat",
+    "certs": {
+      "technical": { "title": "AWS Technical Essentials", "issuer": "Amazon Web Services", "desc": "Fondamentaux de l'infrastructure cloud : EC2, S3, VPC, IAM." },
+      "cloud": { "title": "AWS Cloud Practitioner", "issuer": "Amazon Web Services", "desc": "Compréhension globale du cloud AWS : modèles de service, tarification, sécurité." },
+      "database": { "title": "AWS Database Offerings", "issuer": "Amazon Web Services", "desc": "Services de bases de données AWS : RDS, DynamoDB, Aurora, Redshift." },
+      "ai": { "title": "AWS Generative AI", "issuer": "Amazon Web Services", "desc": "IA générative sur AWS : Amazon Bedrock, modèles fondamentaux, prompt engineering." }
+    }
+  },
+  "contact": {
+    "tag": "// contact.envoyer()",
+    "title1": "Parlons de votre ",
+    "title2": "projet",
+    "title3": " ?",
+    "subtitle": "Dites-moi ce dont vous avez besoin et je vous réponds en moins de 24 heures.",
+    "form": {
+      "name": "Votre nom *",
+      "email": "votre@email.com *",
+      "phone": "Téléphone (optionnel)",
+      "service": "De quoi avez-vous besoin ?",
+      "service_web": "Développement web",
+      "service_auto": "Automatisation",
+      "service_api": "Intégration d'APIs",
+      "service_consult": "Conseil technique",
+      "service_other": "Autre",
+      "budget": "Budget estimé",
+      "budget_basic": "Moins de 500 €",
+      "budget_mid": "500 – 2 000 €",
+      "budget_high": "2 000 – 5 000 €",
+      "budget_premium": "Plus de 5 000 €",
+      "message": "Parlez-moi de votre projet... *",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé !",
+      "error": "Erreur d'envoi"
+    },
+    "links": {
+      "title": "Connectez-vous avec moi",
+      "subtitle": "Je réponds en moins de 24h. Si c'est urgent, écrivez-moi sur WhatsApp.",
+      "tip_title": "Conseil",
+      "tip_text": "Vous ne savez pas quoi écrire ? Dites-moi simplement comment je peux vous aider et nous trouverons une solution ensemble.",
+      "email_label": "Email direct",
+      "phone_label": "Téléphone",
+      "whatsapp_label": "WhatsApp",
+      "linkedin_label": "LinkedIn",
+      "github_label": "GitHub"
+    }
+  },
+  "footer": {
+    "description": "Développeur logiciel de Carthagène, Colombie. Je crée des applications web et j'automatise des processus pour aider les entreprises à grandir.",
+    "nav_title": "Navigation",
+    "services_title": "Services",
+    "services": ["Développement Web Full-Stack", "Automatisation de Processus", "Applications Sur Mesure", "Conseil Technique", "Cloud & DevOps (AWS)"],
+    "contact_title": "Contact",
+    "phone_label": "Téléphone",
+    "whatsapp_action": "Envoyer un message",
+    "location_label": "Emplacement",
+    "rights": "Tous droits réservés.",
+    "made_with": "Fait avec",
+    "in_city": "à Carthagène"
+  },
+  "cta": {
+    "emoji": "🚀",
+    "title": "Vous avez un projet en tête ?",
+    "subtitle": "Parlons de comment je peux vous aider à concrétiser votre idée. De l'automatisation au développement web complet.",
+    "btn_talk": "Parlons-en",
+    "btn_whatsapp": "💬 WhatsApp direct"
+  },
+  "whatsapp": { "tooltip": "On discute sur WhatsApp ?" },
+  "lang": { "label": "FR" }
+}

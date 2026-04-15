@@ -4,44 +4,17 @@ import { useInView } from 'react-intersection-observer'
 import { HiMail, HiCheckCircle, HiPhone, HiUser, HiBriefcase, HiChat } from 'react-icons/hi'
 import { BsWhatsapp, BsSend } from 'react-icons/bs'
 import AnimatedTitle from './AnimatedTitle'
+import { useTranslation } from 'react-i18next'
 
-/* ─── Links de contacto ─────────────────────────────────────────────────── */
 const CONTACT_LINKS = [
-  {
-    icon:  HiMail,
-    label: 'Email',
-    value: 'josecaballerogonzalez49@gmail.com',
-    href:  'mailto:josecaballerogonzalez49@gmail.com',
-    color: '#00d4ff',
-  },
-  {
-    icon:  HiPhone,
-    label: 'Teléfono',
-    value: '+57 304 666 1245',
-    href:  'tel:+573046661245',
-    color: '#8b5cf6',
-  },
-  {
-    icon:  BsWhatsapp,
-    label: 'WhatsApp',
-    value: '+57 304 666 1245',
-    href:  'https://wa.me/573046661245',
-    color: '#25d366',
-  },
+  { icon: HiMail,    labelKey: 'contact.links.email_label',    value: 'josecaballerogonzalez49@gmail.com', href: 'mailto:josecaballerogonzalez49@gmail.com', color: '#00d4ff' },
+  { icon: HiPhone,   labelKey: 'contact.links.phone_label',    value: '+57 304 666 1245',                  href: 'tel:+573046661245',                       color: '#8b5cf6' },
+  { icon: BsWhatsapp, labelKey: 'contact.links.whatsapp_label', value: '+57 304 666 1245',                  href: 'https://wa.me/573046661245',              color: '#25d366' },
 ]
 
-const SERVICE_OPTIONS = [
-  'Desarrollo Web',
-  'Automatización de procesos',
-  'Aplicación a medida',
-  'Consultoría técnica',
-  'Otro',
-]
-
-/* ─── Componente de formulario ──────────────────────────────────────────── */
 export default function Contact() {
   const { ref, inView } = useInView({ threshold: 0.08, triggerOnce: true })
-
+  const { t } = useTranslation()
   const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', budget: '', message: '' })
   const [status, setStatus] = useState('idle')
 
@@ -50,7 +23,6 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('loading')
-
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -67,41 +39,34 @@ export default function Contact() {
     } catch {
       setStatus('error')
     }
-
     setTimeout(() => setStatus('idle'), 4500)
   }
 
-  const inputClass = 'w-full bg-bg-card border border-white/[0.08] rounded-lg sm:rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-white text-sm placeholder-text-muted/60 focus:outline-none focus:border-accent-cyan/40 focus:ring-1 focus:ring-accent-cyan/20 transition-all duration-200'
-  const selectClass = `${inputClass} [&>option]:bg-[#141427] [&>option]:text-white`
+  const inputClass = 'w-full bg-bg-card border border-glass-border rounded-lg sm:rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-text-primary text-sm placeholder-text-muted/60 focus:outline-none focus:border-accent-cyan/40 focus:ring-1 focus:ring-accent-cyan/20 transition-all duration-200'
+  const selectClass = `${inputClass} [&>option]:bg-bg-card [&>option]:text-text-primary`
 
   return (
     <section id="contacto" className="py-16 sm:py-28 relative overflow-hidden" ref={ref}>
-      {/* Orbes */}
       <div className="absolute top-20 left-0 w-72 h-72 bg-accent-cyan/[0.03] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-64 h-64 bg-accent-violet/[0.04] rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-
-        {/* Encabezado centrado */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.25 }}
           className="mb-14 text-center"
         >
-          <span className="section-tag">// new Message()</span>
+          <span className="section-tag">{t('contact.tag')}</span>
           <AnimatedTitle className="section-title">
-            ¿Arrancamos un <span className="accent-text">proyecto</span>?
+            {t('contact.title1')}<span className="accent-text">{t('contact.title2')}</span>{t('contact.title3')}
           </AnimatedTitle>
           <p className="section-subtitle mt-3 mx-auto text-center max-w-xl">
-            Disponible para freelance, trabajo remoto y oportunidades en equipo.
-            Cuéntame tu idea y te respondo en menos de 24 horas.
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10">
-
-          {/* ── Formulario (3 cols) ────────────────────────────────────── */}
           <motion.div
             initial={{ opacity: 0, x: -16 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -109,82 +74,75 @@ export default function Contact() {
             className="lg:col-span-3"
           >
             <div className="group relative overflow-hidden rounded-2xl p-[1px]">
-              {/* Borde hover */}
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                style={{ background: 'conic-gradient(from 135deg, transparent, #00d4ff30, transparent, #8b5cf625, transparent)' }}
-              />
+                style={{ background: 'conic-gradient(from 135deg, transparent, #00d4ff30, transparent, #8b5cf625, transparent)' }} />
 
               <div className="relative bg-bg-card rounded-2xl p-7">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
-
-                  {/* Fila 1: Nombre + Email */}
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="flex items-center gap-1.5 text-text-secondary text-sm mb-2" htmlFor="name">
-                        <HiUser className="text-accent-cyan text-xs" /> Nombre *
+                        <HiUser className="text-accent-cyan text-xs" /> {t('contact.form.name')}
                       </label>
                       <input id="name" type="text" name="name" value={form.name} onChange={handleChange} required
-                        placeholder="Tu nombre completo" className={inputClass} />
+                        placeholder={t('contact.form.name')} className={inputClass} />
                     </div>
                     <div>
                       <label className="flex items-center gap-1.5 text-text-secondary text-sm mb-2" htmlFor="email">
-                        <HiMail className="text-accent-cyan text-xs" /> Email *
+                        <HiMail className="text-accent-cyan text-xs" /> {t('contact.form.email')}
                       </label>
                       <input id="email" type="email" name="email" value={form.email} onChange={handleChange} required
-                        placeholder="tu@email.com" className={inputClass} />
+                        placeholder={t('contact.form.email')} className={inputClass} />
                     </div>
                   </div>
 
-                  {/* Fila 2: Teléfono + Servicio */}
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="flex items-center gap-1.5 text-text-secondary text-sm mb-2" htmlFor="phone">
-                        <HiPhone className="text-accent-cyan text-xs" /> Teléfono
+                        <HiPhone className="text-accent-cyan text-xs" /> {t('contact.form.phone')}
                       </label>
                       <input id="phone" type="tel" name="phone" value={form.phone} onChange={handleChange}
                         placeholder="+57 300 000 0000" className={inputClass} />
                     </div>
                     <div>
                       <label className="flex items-center gap-1.5 text-text-secondary text-sm mb-2" htmlFor="service">
-                        <HiBriefcase className="text-accent-cyan text-xs" /> Tipo de proyecto
+                        <HiBriefcase className="text-accent-cyan text-xs" /> {t('contact.form.service')}
                       </label>
                       <select id="service" name="service" value={form.service} onChange={handleChange}
                         className={`${selectClass} ${!form.service ? 'text-text-muted/60' : ''}`}>
-                        <option value="">Selecciona una opción</option>
-                        {SERVICE_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
+                        <option value="">{t('contact.form.service')}</option>
+                        <option value="web">{t('contact.form.service_web')}</option>
+                        <option value="auto">{t('contact.form.service_auto')}</option>
+                        <option value="api">{t('contact.form.service_api')}</option>
+                        <option value="consult">{t('contact.form.service_consult')}</option>
+                        <option value="other">{t('contact.form.service_other')}</option>
                       </select>
                     </div>
                   </div>
 
-                  {/* Fila 3: Presupuesto */}
                   <div>
                     <label className="flex items-center gap-1.5 text-text-secondary text-sm mb-2" htmlFor="budget">
-                      💰 Presupuesto estimado
+                      {t('contact.form.budget')}
                     </label>
                     <select id="budget" name="budget" value={form.budget} onChange={handleChange}
                       className={`${selectClass} ${!form.budget ? 'text-text-muted/60' : ''}`}>
-                      <option value="">Selecciona un rango</option>
-                      <option value="< $500.000 COP">Menos de $500.000 COP</option>
-                      <option value="$500.000 - $1.500.000 COP">$500.000 – $1.500.000 COP</option>
-                      <option value="$1.500.000 - $3.000.000 COP">$1.500.000 – $3.000.000 COP</option>
-                      <option value="> $3.000.000 COP">Más de $3.000.000 COP</option>
-                      <option value="Por definir">Por definir</option>
+                      <option value="">{t('contact.form.budget')}</option>
+                      <option value="basic">{t('contact.form.budget_basic')}</option>
+                      <option value="mid">{t('contact.form.budget_mid')}</option>
+                      <option value="high">{t('contact.form.budget_high')}</option>
+                      <option value="premium">{t('contact.form.budget_premium')}</option>
                     </select>
                   </div>
 
-                  {/* Fila 4: Mensaje */}
                   <div>
                     <label className="flex items-center gap-1.5 text-text-secondary text-sm mb-2" htmlFor="message">
-                      <HiChat className="text-accent-cyan text-xs" /> Mensaje *
+                      <HiChat className="text-accent-cyan text-xs" /> {t('contact.form.message')}
                     </label>
                     <textarea id="message" name="message" value={form.message} onChange={handleChange} required rows={5}
-                      placeholder="Cuéntame sobre tu proyecto, qué necesitas y en qué te puedo ayudar..."
+                      placeholder={t('contact.form.message')}
                       className={`${inputClass} resize-none`} />
                   </div>
 
-                  {/* Botón enviar */}
                   <motion.button
                     type="submit"
                     disabled={status === 'loading' || status === 'success'}
@@ -200,12 +158,12 @@ export default function Contact() {
                     )}
                     {status === 'success' && <HiCheckCircle size={17} />}
                     {status !== 'loading' && status !== 'success' && <BsSend size={14} />}
-                    {status === 'loading' ? 'Enviando...' : status === 'success' ? '¡Mensaje enviado!' : 'Enviar mensaje'}
+                    {status === 'loading' ? t('contact.form.sending') : status === 'success' ? t('contact.form.success') : t('contact.form.submit')}
                   </motion.button>
 
                   {status === 'error' && (
                     <p className="text-red-400 text-sm text-center">
-                      Hubo un error al enviar. Inténtalo de nuevo o escríbeme por WhatsApp.
+                      {t('contact.form.error')}
                     </p>
                   )}
                 </form>
@@ -213,7 +171,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* ── Links de contacto (2 cols) ──────────────────────────── */}
           <motion.div
             initial={{ opacity: 0, x: 16 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -222,10 +179,10 @@ export default function Contact() {
           >
             <div className="mb-1">
               <h3 className="font-heading font-semibold text-text-primary text-xl mb-1.5">
-                Conecta conmigo
+                {t('contact.links.title')}
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed">
-                Respondo en menos de 24h. Si es urgente, escríbeme por WhatsApp.
+                {t('contact.links.subtitle')}
               </p>
             </div>
 
@@ -233,7 +190,7 @@ export default function Contact() {
               const Icon = link.icon
               return (
                 <motion.a
-                  key={link.label}
+                  key={link.labelKey}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -254,7 +211,7 @@ export default function Contact() {
                       <Icon style={{ color: link.color }} />
                     </div>
                     <div className="relative z-10">
-                      <p className="text-text-muted text-xs mb-0.5">{link.label}</p>
+                      <p className="text-text-muted text-xs mb-0.5">{t(link.labelKey)}</p>
                       <p className="text-text-primary text-sm font-medium">{link.value}</p>
                     </div>
                   </div>
@@ -262,11 +219,10 @@ export default function Contact() {
               )
             })}
 
-            {/* Tip */}
-            <div className="mt-auto bg-bg-card border border-white/[0.06] rounded-2xl p-5">
-              <p className="text-accent-cyan text-xs font-semibold mb-2">💡 Tip</p>
+            <div className="mt-auto bg-bg-card border border-[var(--border-base)] rounded-2xl p-5">
+              <p className="text-accent-cyan text-xs font-semibold mb-2">{t('contact.links.tip_title')}</p>
               <p className="text-text-muted text-xs leading-relaxed">
-                ¿No sabes qué escribir? Solo cuéntame en qué te puedo ayudar y lo resolvemos juntos. Sin compromisos.
+                {t('contact.links.tip_text')}
               </p>
             </div>
           </motion.div>

@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "about": "Sobre mim",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "automation": "Automação",
+    "certifications": "Certificações",
+    "contact": "Contato",
+    "cta": "Entrar em contato"
+  },
+  "hero": {
+    "badge": "Open to work · disponível agora",
+    "greeting": "Olá, eu sou",
+    "name": "Jose Caballero",
+    "subtitle1": "Desenvolvedor de Software & ",
+    "subtitle2": "Automação de Processos",
+    "description": "Desenvolvedor de Software com experiência em desenvolvimento full-stack com React, Node.js e Python, certificado AWS e especializado em automatizar fluxos empresariais com n8n e Make.com.",
+    "cta_projects": "Ver projetos",
+    "cta_cv": "Baixar CV",
+    "scroll": "rolar",
+    "location": "Cartagena, Colômbia",
+    "typewriter": ["React Developer", "Automação", "Full-Stack", "Cloud AWS"]
+  },
+  "about": {
+    "tag": "// sobre.mim",
+    "title1": "Sobre ",
+    "title2": "mim",
+    "location": "Cartagena, Colômbia",
+    "age": "21 anos",
+    "p1": "Tenho <1>21 anos</1> e sou de Cartagena das Índias. Desde jovem me interessei por tecnologia e comecei a explorar o desenvolvimento de software por conta própria, o que rapidamente se tornou minha paixão.",
+    "p2": "Me formei no <1>SENA</1> como Tecnólogo em Análise e Desenvolvimento de Software, trabalhando em projetos reais com equipes multidisciplinares.",
+    "p3": "Me motiva construir soluções que otimizem processos e gerem impacto real na produtividade das pessoas.",
+    "h1": "Desenvolvedor Full-Stack",
+    "h1_desc": "Trabalho com React, Node.js e Python para construir aplicações completas.",
+    "h2": "Automação",
+    "h2_desc": "Automatizo processos com n8n e Make.com para que as empresas parem de perder tempo com tarefas repetitivas.",
+    "h3": "Sempre aprendendo",
+    "h3_desc": "Certificado AWS, sempre buscando novas tecnologias e melhores formas de resolver problemas."
+  },
+  "stats": {
+    "projects": "Projetos entregues",
+    "experience": "Meses de Experiência",
+    "certs": "Certificações AWS",
+    "tools": "Ferramentas de automação"
+  },
+  "skills": {
+    "tag": "// tech_stack.json",
+    "title1": "Meu ",
+    "title2": "stack",
+    "title3": " técnico",
+    "subtitle": "Ferramentas com as quais construo diariamente — clique em qualquer uma para ver o que faço com ela.",
+    "viewMore": "ver mais",
+    "close": "Fechar",
+    "cats": { "Frontend": "Frontend", "Backend": "Backend", "Cloud & DevOps": "Cloud & DevOps", "Datos": "Dados", "Automatización": "Automação", "Herramientas": "Ferramentas" },
+    "descs": {
+      "JavaScript": "Minha linguagem principal. Domino ES6+, async/await, destructuring e manipulação do DOM.",
+      "HTML5": "Estrutura semântica, acessibilidade, formulários avançados e SEO on-page.",
+      "CSS3": "Flexbox, Grid, animações, propriedades customizadas e media queries.",
+      "React": "Construo SPAs e interfaces interativas com hooks, context e componentização.",
+      "Next.js": "SSR, SSG, API routes e otimização de imagens para SEO e performance.",
+      "Tailwind CSS": "Interfaces responsive com CSS utility-first e tokens de design personalizados.",
+      "Framer Motion": "Animações declarativas em React: transições, gestos e micro-interações.",
+      "Vite": "Build tool ultra-rápido com HMR instantâneo para projetos React.",
+      "Vue.js": "Interfaces reativas com Composition API, reatividade e ecossistema completo.",
+      "Python": "Scripts de automação, APIs com Flask e processamento de dados.",
+      "Node.js": "Servidores e APIs REST com Express. Autenticação JWT e middleware.",
+      "APIs REST": "Design e consumo de endpoints RESTful. Documentação com Postman.",
+      "AWS": "Serviços cloud Amazon: EC2, S3, RDS, Lambda. 4 certificações AWS.",
+      "Docker": "Containerização com Docker. Imagens, docker-compose e deploys reproduzíveis.",
+      "SQL": "Esquemas normalizados, queries otimizadas e procedimentos armazenados.",
+      "MongoDB": "Bancos não relacionais. Coleções, documentos aninhados e pipelines de agregação.",
+      "Supabase": "Backend-as-a-service: autenticação, Postgres em tempo real e edge functions.",
+      "n8n": "Fluxos com triggers, webhooks e lógica condicional. Automação sem código.",
+      "Make.com": "Cenários multi-módulo para sincronizar dados entre plataformas.",
+      "Claude / IA": "Modelos de IA para gerar código, automatizar e criar assistentes inteligentes.",
+      "Figma": "Wireframes, protótipos interativos e sistemas de design.",
+      "WordPress": "Sites WordPress, temas personalizados, plugins e gestão de conteúdo.",
+      "Git / GitHub": "Controle de versão com Git, branches, pull requests e workflow colaborativo.",
+      "Postman": "Testes e documentação de APIs. Coleções e testes automatizados.",
+      "Stitch": "Componentes visuais e tokens de design para acelerar a produção."
+    }
+  },
+  "projects": {
+    "tag": "// projetos.map()",
+    "title1": "Projetos ",
+    "title2": "reais",
+    "subtitle": "Cada projeto foi uma solução real para um cliente real. São sistemas em produção gerando valor.",
+    "viewProject": "Ver projeto",
+    "close": "Fechar",
+    "context": "Contexto",
+    "story": "A história",
+    "details": "Em detalhe",
+    "impact": "Impacto",
+    "features": "Funcionalidades chave",
+    "items": {
+      "rrhh": { "title": "Automação RH", "description": "Pipeline para RH: onboarding sem papel, contratos e relatórios automáticos.", "context": "Estágio · SENA", "story": "Desenvolvi durante meu estágio no SENA. O RH era 100% manual.", "longDesc": "Pipeline n8n que recebe dados, gera contrato PDF, envia por email e atualiza dashboard.", "impact": "Onboarding reduzido de 3 dias para 15 minutos.", "features": ["Onboarding automatizado", "Contratos PDF dinâmicos", "Relatórios semanais auto-gerados", "Dashboard em tempo real", "Notificações automáticas"] },
+      "optica": { "title": "Ótica Online", "description": "App full-stack para ótica: catálogo, agendamento e dashboard admin.", "context": "Projeto cliente · Cartagena", "story": "Cliente com ótica precisava digitalizar o negócio.", "longDesc": "Frontend React com catálogo interativo, agendamento em tempo real e painel admin.", "impact": "Cliente saiu dos cadernos para o digital completo.", "features": ["Catálogo com filtros", "Agendamento em tempo real", "Dashboard com métricas", "Gestão de estoque", "Exportação de dados"] },
+      "discoteca": { "title": "Discoteca & Eventos", "description": "Plataforma de reservas: áreas VIP, mesas, controle de capacidade e eventos.", "context": "Projeto cliente · Cartagena", "story": "Dono de bar precisava de sistema para reservas e eventos.", "longDesc": "Reservas com disponibilidade em tempo real e módulo de eventos.", "impact": "Sem mais reservas cruzadas. Clientes reservam online.", "features": ["Reserva online mesas & VIP", "Controle de capacidade", "Módulo de eventos", "Painel do staff", "Histórico VIP & relatórios"] },
+      "veterinaria": { "title": "Clínica Veterinária", "description": "Sistema clínico web: agenda, histórico médico, prescrições e painel médico.", "context": "Projeto cliente · Cartagena", "story": "Veterinária precisava de sistema para consultas dos pacientes.", "longDesc": "CRUD completo com relações entre pacientes, donos e tratamentos.", "impact": "Tudo em um clique. A clínica atende mais em menos tempo.", "features": ["Fichas digitais", "Histórico médico completo", "Agenda inteligente", "Prescrições digitais", "Painel veterinário"] }
+    }
+  },
+  "automation": {
+    "tag": "// automacao.run()",
+    "title1": "Automação ",
+    "title2": "inteligente",
+    "subtitle": "Não faço só sites. Conecto sistemas, automatizo fluxos e elimino tarefas repetitivas.",
+    "code_tab": "automacao.js",
+    "cards": {
+      "flows": { "title": "Fluxos automatizados", "desc": "Pipelines end-to-end que conectam apps e executam ações sem intervenção humana." },
+      "integrations": { "title": "Integrações API", "desc": "Conecto qualquer serviço: CRMs, ERPs, bancos de dados, email, WhatsApp." },
+      "bots": { "title": "Bots & Assistentes", "desc": "Bots IA que respondem consultas e aprendem do contexto do negócio." },
+      "reports": { "title": "Relatórios automáticos", "desc": "Dashboards e relatórios que se criam sozinhos com dados em tempo real." }
+    }
+  },
+  "certifications": {
+    "tag": "// certificacoes.verified()",
+    "title1": "Formação & ",
+    "title2": "Certificações",
+    "subtitle": "Cada certificado é resultado de horas reais de estudo. Não coleciono badges — domino o que certifico.",
+    "education_title": "Formação acadêmica",
+    "edu": {
+      "degree": {
+        "title": "Tecnólogo em Análise e Desenvolvimento de Software",
+        "place": "SENA — Serviço Nacional de Aprendizagem",
+        "period": "2023 – 2025 · Cartagena, Colômbia"
+      },
+      "bachillerato": {
+        "title": "Ensino Médio",
+        "place": "Institución Educativa Soledad Acosta de Samper",
+        "period": "2018 – 2023 · Cartagena, Colômbia"
+      }
+    },
+    "download_diploma": "Ver diploma",
+    "sennova_title": "Pesquisa SENNOVA",
+    "sennova_desc": "Participei como pesquisador auxiliar no programa SENNOVA do SENA, trabalhando em projetos de inovação tecnológica aplicada.",
+    "sennova_tags": ["Inovação", "Pesquisa", "Protótipos", "Automação"],
+    "aws_section_title": "Certificações AWS",
+    "download_cert": "Ver certificado",
+    "certs": {
+      "technical": { "title": "AWS Technical Essentials", "issuer": "Amazon Web Services", "desc": "Fundamentos de infraestrutura cloud: EC2, S3, VPC, IAM." },
+      "cloud": { "title": "AWS Cloud Practitioner", "issuer": "Amazon Web Services", "desc": "Compreensão global da nuvem AWS: modelos de serviço, preços, segurança." },
+      "database": { "title": "AWS Database Offerings", "issuer": "Amazon Web Services", "desc": "Serviços de banco de dados AWS: RDS, DynamoDB, Aurora, Redshift." },
+      "ai": { "title": "AWS Generative AI", "issuer": "Amazon Web Services", "desc": "IA generativa na AWS: Amazon Bedrock, modelos fundacionais, prompt engineering." }
+    }
+  },
+  "contact": {
+    "tag": "// contato.enviar()",
+    "title1": "Vamos falar do seu ",
+    "title2": "projeto",
+    "title3": "?",
+    "subtitle": "Me conte o que precisa e respondo em menos de 24 horas.",
+    "form": {
+      "name": "Seu nome *", "email": "seu@email.com *", "phone": "Telefone (opcional)",
+      "service": "O que você precisa?", "service_web": "Desenvolvimento web", "service_auto": "Automação",
+      "service_api": "Integração de APIs", "service_consult": "Consultoria técnica", "service_other": "Outro",
+      "budget": "Orçamento estimado", "budget_basic": "Menos de R$2.500", "budget_mid": "R$2.500 – R$10.000",
+      "budget_high": "R$10.000 – R$25.000", "budget_premium": "Mais de R$25.000",
+      "message": "Conte-me sobre seu projeto... *", "submit": "Enviar mensagem",
+      "sending": "Enviando...", "success": "Mensagem enviada!", "error": "Erro ao enviar"
+    },
+    "links": {
+      "title": "Conecte-se comigo",
+      "subtitle": "Respondo em menos de 24h. Se é urgente, me escreva no WhatsApp.",
+      "tip_title": "Dica",
+      "tip_text": "Não sabe o que escrever? Apenas me conte como posso ajudar e resolvemos juntos. Sem compromisso.",
+      "email_label": "Email direto",
+      "phone_label": "Telefone",
+      "whatsapp_label": "WhatsApp",
+      "linkedin_label": "LinkedIn",
+      "github_label": "GitHub"
+    }
+  },
+  "footer": {
+    "description": "Desenvolvedor de Software de Cartagena, Colômbia. Construo aplicações web e automatizo processos para que as empresas cresçam.",
+    "nav_title": "Navegação",
+    "services_title": "Serviços",
+    "services": ["Desenvolvimento Web Full-Stack", "Automação de Processos", "Aplicações Sob Medida", "Consultoria Técnica", "Cloud & DevOps (AWS)"],
+    "contact_title": "Contato",
+    "phone_label": "Telefone",
+    "whatsapp_action": "Enviar mensagem",
+    "location_label": "Localização",
+    "rights": "Todos os direitos reservados.",
+    "made_with": "Feito com",
+    "in_city": "em Cartagena"
+  },
+  "cta": {
+    "emoji": "🚀", "title": "Tem um projeto em mente?",
+    "subtitle": "Vamos conversar sobre como posso ajudar a transformar sua ideia em realidade.",
+    "btn_talk": "Vamos conversar", "btn_whatsapp": "💬 WhatsApp direto"
+  },
+  "whatsapp": { "tooltip": "Conversar no WhatsApp?" },
+  "lang": { "label": "PT" }
+}

@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "automation": "Automatisierung",
+    "certifications": "Zertifizierungen",
+    "contact": "Kontakt",
+    "cta": "Kontaktieren"
+  },
+  "hero": {
+    "badge": "Open to work · jetzt verfügbar",
+    "greeting": "Hallo, ich bin",
+    "name": "Jose Caballero",
+    "subtitle1": "Softwareentwickler & ",
+    "subtitle2": "Prozessautomatisierung",
+    "description": "Softwareentwickler mit Erfahrung in Full-Stack-Entwicklung mit React, Node.js und Python, AWS-zertifiziert und spezialisiert auf die Automatisierung von Geschäftsabläufen mit n8n und Make.com.",
+    "cta_projects": "Projekte ansehen",
+    "cta_cv": "CV herunterladen",
+    "scroll": "scrollen",
+    "location": "Cartagena, Kolumbien",
+    "typewriter": ["React Developer", "Automatisierung", "Full-Stack", "Cloud AWS"]
+  },
+  "about": {
+    "tag": "// ueber.mich",
+    "title1": "Über ",
+    "title2": "mich",
+    "location": "Cartagena, Kolumbien",
+    "age": "21 Jahre",
+    "p1": "Ich bin <1>21 Jahre</1> alt und komme aus Cartagena de Indias. Schon früh interessierte ich mich für Technologie und begann, Softwareentwicklung selbstständig zu erkunden.",
+    "p2": "Ich habe mich am <1>SENA</1> als Technologe für Softwareanalyse und -entwicklung ausgebildet und an realen Projekten mit multidisziplinären Teams gearbeitet.",
+    "p3": "Mich motiviert es, Lösungen zu bauen, die Prozesse optimieren und einen echten Einfluss auf die Produktivität der Menschen haben.",
+    "h1": "Full-Stack-Entwickler",
+    "h1_desc": "Ich arbeite mit React, Node.js und Python, um komplette Anwendungen zu bauen.",
+    "h2": "Automatisierung",
+    "h2_desc": "Ich automatisiere Prozesse mit n8n und Make.com, damit Unternehmen keine Zeit mit repetitiven Aufgaben verschwenden.",
+    "h3": "Immer am Lernen",
+    "h3_desc": "AWS-zertifiziert, immer auf der Suche nach neuen Technologien und besseren Lösungsansätzen."
+  },
+  "stats": {
+    "projects": "Gelieferte Projekte",
+    "experience": "Monate Erfahrung",
+    "certs": "AWS-Zertifizierungen",
+    "tools": "Automatisierungstools"
+  },
+  "skills": {
+    "tag": "// tech_stack.json",
+    "title1": "Mein ",
+    "title2": "Tech",
+    "title3": "-Stack",
+    "subtitle": "Werkzeuge, mit denen ich täglich arbeite — klicken Sie auf eines, um zu sehen, was ich damit mache.",
+    "viewMore": "mehr erfahren",
+    "close": "Schließen",
+    "cats": { "Frontend": "Frontend", "Backend": "Backend", "Cloud & DevOps": "Cloud & DevOps", "Datos": "Daten", "Automatización": "Automatisierung", "Herramientas": "Werkzeuge" },
+    "descs": {
+      "JavaScript": "Meine Hauptsprache. ES6+, async/await, Destructuring und DOM-Manipulation.",
+      "HTML5": "Semantische Struktur, Barrierefreiheit, fortgeschrittene Formulare und SEO.",
+      "CSS3": "Flexbox, Grid, Animationen, Custom Properties und Media Queries.",
+      "React": "SPAs und interaktive Oberflächen mit Hooks, Context und Komponentisierung.",
+      "Next.js": "SSR, SSG, API-Routen und Bildoptimierung für SEO und Performance.",
+      "Tailwind CSS": "Responsive Interfaces mit Utility-First CSS und eigenen Design-Tokens.",
+      "Framer Motion": "Deklarative Animationen in React: Layout-Übergänge und Mikro-Interaktionen.",
+      "Vite": "Ultraschnelles Build-Tool mit sofortigem HMR für React-Projekte.",
+      "Vue.js": "Reaktive Oberflächen mit Composition API und dem Vue-Ökosystem.",
+      "Python": "Automatisierungsskripte, APIs mit Flask und Datenverarbeitung.",
+      "Node.js": "Server und REST-APIs mit Express. JWT-Authentifizierung und Middleware.",
+      "APIs REST": "Design und Nutzung von RESTful-Endpoints. Dokumentation mit Postman.",
+      "AWS": "Amazon Cloud-Services: EC2, S3, RDS, Lambda. 4 AWS-Zertifizierungen.",
+      "Docker": "Containerisierung mit Docker. Images, Docker-Compose und reproduzierbare Deployments.",
+      "SQL": "Normalisierte Schemata, optimierte Abfragen und gespeicherte Prozeduren.",
+      "MongoDB": "Nicht-relationale Datenbanken. Sammlungen, eingebettete Dokumente und Aggregation-Pipelines.",
+      "Supabase": "Backend-as-a-Service: Authentifizierung, Echtzeit-Postgres und Edge Functions.",
+      "n8n": "Workflows mit Triggern, Webhooks und bedingter Logik. No-Code-Automatisierung.",
+      "Make.com": "Multi-Modul-Szenarien zur Datensynchronisierung zwischen Plattformen.",
+      "Claude / IA": "KI-Modelle zur Codegenerierung, Automatisierung und Erstellung intelligenter Assistenten.",
+      "Figma": "Wireframes, interaktive Prototypen und Design-Systeme.",
+      "WordPress": "WordPress-Seiten, eigene Themes, Plugins und Content-Management.",
+      "Git / GitHub": "Versionskontrolle mit Git, Branches, Pull Requests und kollaborativer Workflow.",
+      "Postman": "API-Tests und Dokumentation. Sammlungen und automatisierte Tests.",
+      "Stitch": "Visuelle Komponenten und Design-Tokens zur Beschleunigung der Produktion."
+    }
+  },
+  "projects": {
+    "tag": "// projekte.map()",
+    "title1": "Echte ",
+    "title2": "Projekte",
+    "subtitle": "Jedes Projekt war eine echte Lösung für einen echten Kunden. Systeme in Produktion, die Wert generieren.",
+    "viewProject": "Projekt ansehen",
+    "close": "Schließen",
+    "context": "Kontext",
+    "story": "Die Geschichte",
+    "details": "Im Detail",
+    "impact": "Wirkung",
+    "features": "Hauptfunktionen",
+    "items": {
+      "rrhh": { "title": "HR-Automatisierung", "description": "HR-Pipeline: papierloses Onboarding, Vertragsgenierung und automatische Berichte.", "context": "Praktikum · SENA", "story": "Während meines Praktikums beim SENA entwickelt. Die HR-Abteilung war 100% manuell.", "longDesc": "n8n-Pipeline, die Daten empfängt, PDF-Verträge erstellt, per E-Mail versendet und das Dashboard aktualisiert.", "impact": "Onboarding von 3 Tagen auf 15 Minuten reduziert.", "features": ["Automatisiertes papierloses Onboarding", "Dynamische PDF-Vertragserstellung", "Automatische Wochenberichte", "Echtzeit-Dashboard", "Automatische E-Mail-Benachrichtigungen"] },
+      "optica": { "title": "Optiker Online", "description": "Full-Stack-App für Optiker: Katalog, Terminbuchung und Admin-Dashboard.", "context": "Kundenprojekt · Cartagena", "story": "Ein Optiker-Kunde brauchte eine Digitalisierung seines Geschäfts.", "longDesc": "React-Frontend mit interaktivem Katalog, Echtzeit-Terminbuchung und Admin-Panel.", "impact": "Vom Notizbuch zur vollständigen Digitalisierung.", "features": ["Linsenkatalog mit Filtern", "Echtzeit-Terminbuchung", "Admin-Dashboard mit Verkaufsmetriken", "Bestandsverwaltung", "Datenexport und Berichte"] },
+      "discoteca": { "title": "Diskothek & Events", "description": "Buchungsplattform: VIP-Bereiche, Tische, Kapazitätskontrolle und Eventmanagement.", "context": "Kundenprojekt · Cartagena", "story": "Ein Bar-Besitzer brauchte ein System für Reservierungen und Events.", "longDesc": "Buchungen mit Echtzeit-Verfügbarkeit und Event-Modul.", "impact": "Keine doppelten Buchungen mehr. Kunden buchen online.", "features": ["Online-Tisch- & VIP-Buchung", "Echtzeit-Kapazitätskontrolle", "Event-Erstellungsmodul", "Staff-Panel mit Auslastungsübersicht", "VIP-Kundenhistorie & Berichte"] },
+      "veterinaria": { "title": "Tierklinik", "description": "Klinisches Websystem: Terminplanung, Krankengeschichte, Rezepte und Ärzte-Panel.", "context": "Kundenprojekt · Cartagena", "story": "Eine Tierklinik brauchte ein System zur Verwaltung der Patientenkonsultationen.", "longDesc": "Vollständiges CRUD mit Beziehungen zwischen Patienten, Besitzern und Behandlungen.", "impact": "Alles in einem Klick. Die Klinik behandelt mehr Patienten in weniger Zeit.", "features": ["Digitale Tierakten", "Vollständige Krankengeschichte", "Intelligente Terminplanung", "Digitale Rezepte", "Exklusives Tierarzt-Panel"] }
+    }
+  },
+  "automation": {
+    "tag": "// automatisierung.run()",
+    "title1": "Intelligente ",
+    "title2": "Automatisierung",
+    "subtitle": "Ich baue nicht nur Websites. Ich verbinde Systeme, automatisiere Abläufe und eliminiere repetitive Aufgaben.",
+    "code_tab": "automatisierung.js",
+    "cards": {
+      "flows": { "title": "Automatisierte Workflows", "desc": "End-to-End-Pipelines, die Apps verbinden und Aktionen ohne menschliches Eingreifen ausführen." },
+      "integrations": { "title": "API-Integrationen", "desc": "Ich verbinde jeden Service: CRMs, ERPs, Datenbanken, E-Mail, WhatsApp." },
+      "bots": { "title": "Bots & Assistenten", "desc": "KI-Bots, die Anfragen beantworten und aus dem Geschäftskontext lernen." },
+      "reports": { "title": "Automatische Berichte", "desc": "Dashboards und Berichte, die sich mit Echtzeit-Daten selbst erstellen." }
+    }
+  },
+  "certifications": {
+    "tag": "// zertifizierungen.verified()",
+    "title1": "Ausbildung & ",
+    "title2": "Zertifizierungen",
+    "subtitle": "Jedes Zertifikat ist das Ergebnis echter Lernstunden. Ich sammle keine Badges — ich beherrsche, was ich zertifiziere.",
+    "education_title": "Akademische Ausbildung",
+    "edu": {
+      "degree": {
+        "title": "Technologe für Softwareanalyse und -entwicklung",
+        "place": "SENA — Nationaler Lernservice",
+        "period": "2023 – 2025 · Cartagena, Kolumbien"
+      },
+      "bachillerato": {
+        "title": "Abitur",
+        "place": "Institución Educativa Soledad Acosta de Samper",
+        "period": "2018 – 2023 · Cartagena, Kolumbien"
+      }
+    },
+    "download_diploma": "Diplom ansehen",
+    "sennova_title": "SENNOVA-Forschung",
+    "sennova_desc": "Ich war Forschungsassistent im SENNOVA-Programm des SENA und arbeitete an angewandten technologischen Innovationsprojekten.",
+    "sennova_tags": ["Innovation", "Forschung", "Prototypen", "Automatisierung"],
+    "aws_section_title": "AWS-Zertifizierungen",
+    "download_cert": "Zertifikat ansehen",
+    "certs": {
+      "technical": { "title": "AWS Technical Essentials", "issuer": "Amazon Web Services", "desc": "Cloud-Infrastruktur-Grundlagen: EC2, S3, VPC, IAM." },
+      "cloud": { "title": "AWS Cloud Practitioner", "issuer": "Amazon Web Services", "desc": "Globales Verständnis der AWS-Cloud: Servicemodelle, Preise, Sicherheit." },
+      "database": { "title": "AWS Database Offerings", "issuer": "Amazon Web Services", "desc": "AWS-Datenbankservices: RDS, DynamoDB, Aurora, Redshift." },
+      "ai": { "title": "AWS Generative AI", "issuer": "Amazon Web Services", "desc": "Generative KI auf AWS: Amazon Bedrock, Foundation Models, Prompt Engineering." }
+    }
+  },
+  "contact": {
+    "tag": "// kontakt.senden()",
+    "title1": "Reden wir über Ihr ",
+    "title2": "Projekt",
+    "title3": "?",
+    "subtitle": "Sagen Sie mir, was Sie brauchen, und ich antworte in weniger als 24 Stunden.",
+    "form": {
+      "name": "Ihr Name *", "email": "ihre@email.com *", "phone": "Telefon (optional)",
+      "service": "Was brauchen Sie?", "service_web": "Webentwicklung", "service_auto": "Automatisierung",
+      "service_api": "API-Integration", "service_consult": "Technische Beratung", "service_other": "Anderes",
+      "budget": "Geschätztes Budget", "budget_basic": "Weniger als 500 €", "budget_mid": "500 – 2.000 €",
+      "budget_high": "2.000 – 5.000 €", "budget_premium": "Mehr als 5.000 €",
+      "message": "Erzählen Sie von Ihrem Projekt... *", "submit": "Nachricht senden",
+      "sending": "Wird gesendet...", "success": "Nachricht gesendet!", "error": "Fehler beim Senden"
+    },
+    "links": {
+      "title": "Verbinden Sie sich mit mir",
+      "subtitle": "Ich antworte innerhalb von 24 Stunden. Wenn es dringend ist, schreiben Sie mir auf WhatsApp.",
+      "tip_title": "Tipp",
+      "tip_text": "Sie wissen nicht, was Sie schreiben sollen? Erzählen Sie mir einfach, wie ich helfen kann, und wir finden gemeinsam eine Lösung.",
+      "email_label": "Direkte E-Mail",
+      "phone_label": "Telefon",
+      "whatsapp_label": "WhatsApp",
+      "linkedin_label": "LinkedIn",
+      "github_label": "GitHub"
+    }
+  },
+  "footer": {
+    "description": "Softwareentwickler aus Cartagena, Kolumbien. Ich erstelle Webanwendungen und automatisiere Prozesse, damit Unternehmen wachsen können.",
+    "nav_title": "Navigation",
+    "services_title": "Dienstleistungen",
+    "services": ["Full-Stack Webentwicklung", "Prozessautomatisierung", "Maßgeschneiderte Anwendungen", "Technische Beratung", "Cloud & DevOps (AWS)"],
+    "contact_title": "Kontakt",
+    "phone_label": "Telefon",
+    "whatsapp_action": "Nachricht senden",
+    "location_label": "Standort",
+    "rights": "Alle Rechte vorbehalten.",
+    "made_with": "Erstellt mit",
+    "in_city": "in Cartagena"
+  },
+  "cta": {
+    "emoji": "🚀", "title": "Haben Sie ein Projekt im Sinn?",
+    "subtitle": "Lassen Sie uns darüber sprechen, wie ich Ihnen helfen kann, Ihre Idee zu verwirklichen.",
+    "btn_talk": "Sprechen wir", "btn_whatsapp": "💬 WhatsApp direkt"
+  },
+  "whatsapp": { "tooltip": "Per WhatsApp chatten?" },
+  "lang": { "label": "DE" }
+}

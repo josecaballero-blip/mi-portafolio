@@ -3,69 +3,22 @@ import { useInView } from 'react-intersection-observer'
 import { FaAws } from 'react-icons/fa'
 import { HiAcademicCap, HiExternalLink, HiBriefcase, HiShieldCheck } from 'react-icons/hi'
 import AnimatedTitle from './AnimatedTitle'
+import { useTranslation } from 'react-i18next'
 
 /* ─── Datos ─────────────────────────────────────────────────────────────── */
 const CERTS = [
-  {
-    title:  'AWS Technical Essentials',
-    issuer: 'Amazon Web Services',
-    date:   'Dic 2025',
-    color:  '#ff9900',
-    icon:   FaAws,
-    desc:   'Fundamentos de servicios AWS: EC2, S3, VPC, IAM, RDS y arquitectura cloud básica para desplegar aplicaciones escalables.',
-    pdf:    '/certificados/aws-technical-essentials.pdf',
-  },
-  {
-    title:  'AWS Cloud Practitioner Essentials',
-    issuer: 'Amazon Web Services',
-    date:   'Dic 2025',
-    color:  '#ff9900',
-    icon:   FaAws,
-    desc:   'Modelo de responsabilidad compartida, servicios globales de AWS, pricing, soporte y buenas prácticas para migración a la nube.',
-    pdf:    '/certificados/aws-cloud-practitioner.pdf',
-  },
-  {
-    title:  'AWS Database Offerings',
-    issuer: 'Amazon Web Services',
-    date:   'Dic 2025',
-    color:  '#ff9900',
-    icon:   FaAws,
-    desc:   'Servicios de bases de datos en AWS: RDS, DynamoDB, Aurora, ElastiCache y criterios para elegir el motor adecuado según el caso de uso.',
-    pdf:    '/certificados/aws-database-offerings.pdf',
-  },
-  {
-    title:  'Introduction to Generative AI',
-    issuer: 'Amazon Web Services',
-    date:   'Dic 2025',
-    color:  '#ff9900',
-    icon:   FaAws,
-    desc:   'Conceptos fundamentales de IA generativa, modelos de lenguaje, casos de uso empresariales y servicios AWS como Bedrock y SageMaker.',
-    pdf:    '/certificados/aws-generative-ai.pdf',
-  },
+  { key: 'technical', date: 'Dic 2025', color: '#ff9900', icon: FaAws, pdf: '/certificados/aws-technical-essentials.pdf' },
+  { key: 'cloud',     date: 'Dic 2025', color: '#ff9900', icon: FaAws, pdf: '/certificados/aws-cloud-practitioner.pdf' },
+  { key: 'database',  date: 'Dic 2025', color: '#ff9900', icon: FaAws, pdf: '/certificados/aws-database-offerings.pdf' },
+  { key: 'ai',        date: 'Dic 2025', color: '#ff9900', icon: FaAws, pdf: '/certificados/aws-generative-ai.pdf' },
 ]
 
 const EDUCATION = [
-  {
-    title:  'Tecnólogo en Análisis y Desarrollo de Software',
-    place:  'SENA — Centro de Comercio y Servicios, Regional Bolívar',
-    period: '2023 – 2025',
-    color:  '#22c55e',
-    pdf:    '/certificados/diploma-sena-adso.pdf',
-  },
-  {
-    title:  'Bachillerato Académico',
-    place:  'Colegio Ambientalista Cartagena de Indias',
-    period: '2022',
-    color:  '#8b5cf6',
-  },
+  { key: 'degree', color: '#22c55e', pdf: '/certificados/diploma-sena-adso.pdf' },
+  { key: 'bachillerato', color: '#8b5cf6' },
 ]
 
-const EXPERIENCE_ITEMS = [
-  'Desarrollé interfaces web frontend funcionales y responsivas con React',
-  'Implementé un sistema de automatización de procesos para el departamento de RRHH, optimizando tareas operativas y reduciendo tiempos de gestión',
-  'Utilicé Git y GitHub para el control de versiones y gestión del código fuente durante el desarrollo de los proyectos asignados',
-  'Apliqué metodologías ágiles para la planificación y entrega de tareas dentro del equipo de desarrollo de SENNOVA',
-]
+const EXPERIENCE_ITEMS_COUNT = 4
 
 /* ─── Sub-heading decorativo ────────────────────────────────────────────── */
 function SectionLabel({ icon: Icon, label, color, delay, inView }) {
@@ -89,7 +42,7 @@ function SectionLabel({ icon: Icon, label, color, delay, inView }) {
 }
 
 /* ─── Tarjeta de educación con hover glow ───────────────────────────────── */
-function EduCard({ edu, index, inView }) {
+function EduCard({ edu, index, inView, title, place, period, diplomaLabel }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -118,14 +71,14 @@ function EduCard({ edu, index, inView }) {
           </div>
 
           <div className="flex-1 min-w-0">
-            <h4 className="font-heading font-bold text-[15px] text-text-primary leading-snug">{edu.title}</h4>
-            <p className="text-text-muted text-xs mt-1.5 leading-relaxed">{edu.place}</p>
+            <h4 className="font-heading font-bold text-[15px] text-text-primary leading-snug">{title}</h4>
+            <p className="text-text-muted text-xs mt-1.5 leading-relaxed">{place}</p>
             <div className="flex flex-wrap items-center gap-3 mt-3">
               <span
                 className="text-[11px] font-mono px-2.5 py-1 rounded-full"
                 style={{ color: edu.color, backgroundColor: `${edu.color}12`, border: `1px solid ${edu.color}25` }}
               >
-                {edu.period}
+                {period}
               </span>
               {edu.pdf && (
                 <a
@@ -135,7 +88,7 @@ function EduCard({ edu, index, inView }) {
                   className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-1 rounded-full transition-all duration-200 hover:scale-105"
                   style={{ color: edu.color, backgroundColor: `${edu.color}10`, border: `1px solid ${edu.color}20` }}
                 >
-                  Ver diploma <HiExternalLink className="text-xs" />
+                  {diplomaLabel} <HiExternalLink className="text-xs" />
                 </a>
               )}
             </div>
@@ -147,7 +100,7 @@ function EduCard({ edu, index, inView }) {
 }
 
 /* ─── Tarjeta de certificación optimizada ────────────────────────────── */
-function CertCard({ cert, index, inView }) {
+function CertCard({ cert, index, inView, t }) {
   const Icon = cert.icon
 
   return (
@@ -192,10 +145,10 @@ function CertCard({ cert, index, inView }) {
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="relative z-10 font-heading font-bold text-[15px] text-text-primary leading-snug">
-                {cert.title}
+                {t(`certifications.certs.${cert.key}.title`)}
               </h3>
               <div className="flex items-center gap-2 mt-1.5">
-                <span className="text-[11px] font-mono text-text-muted">{cert.issuer}</span>
+                <span className="text-[11px] font-mono text-text-muted">{t(`certifications.certs.${cert.key}.issuer`)}</span>
                 <span className="text-[10px] text-text-muted">·</span>
                 <span
                   className="text-[11px] font-mono px-2 py-0.5 rounded-full"
@@ -208,7 +161,7 @@ function CertCard({ cert, index, inView }) {
           </div>
 
           {/* Descripción */}
-          <p className="relative z-10 text-text-muted text-xs leading-relaxed flex-1">{cert.desc}</p>
+          <p className="relative z-10 text-text-muted text-xs leading-relaxed flex-1">{t(`certifications.certs.${cert.key}.desc`)}</p>
 
           {/* Ver certificado */}
           {cert.pdf && (
@@ -219,7 +172,7 @@ function CertCard({ cert, index, inView }) {
               className="relative z-10 mt-auto inline-flex items-center gap-2 text-xs font-bold px-3.5 py-2 rounded-lg transition-all duration-200 hover:scale-[1.03] w-fit"
               style={{ color: cert.color, backgroundColor: `${cert.color}12`, border: `1px solid ${cert.color}22` }}
             >
-              Ver certificado
+              {t('certifications.download_cert')}
               <HiExternalLink className="text-sm" />
             </a>
           )}
@@ -232,6 +185,7 @@ function CertCard({ cert, index, inView }) {
 /* ─── Componente principal ─────────────────────────────────────────────── */
 export default function Certifications() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true })
+  const { t } = useTranslation()
 
   return (
     <section id="certificaciones" className="py-16 sm:py-28 bg-bg-secondary/80 backdrop-blur-sm relative overflow-hidden" ref={ref}>
@@ -249,26 +203,30 @@ export default function Certifications() {
           transition={{ duration: 0.3 }}
           className="mb-16 text-center"
         >
-          <span className="section-tag">// formacion.certificados</span>
+          <span className="section-tag">{t('certifications.tag')}</span>
           <AnimatedTitle className="section-title">
-            Mi Formación & <span className="accent-text">Certificaciones</span>
+            {t('certifications.title1')}<span className="accent-text">{t('certifications.title2')}</span>
           </AnimatedTitle>
           <p className="section-subtitle mt-3 max-w-xl mx-auto">
-            La base académica, experiencia profesional y certificaciones que respaldan cada línea de código que escribo.
+            {t('certifications.subtitle')}
           </p>
         </motion.div>
 
         {/* ── Educación ────────────────────────────────────────────────── */}
-        <SectionLabel icon={HiAcademicCap} label="Educación" color="#22c55e" delay={0.05} inView={inView} />
+        <SectionLabel icon={HiAcademicCap} label={t('certifications.education_title')} color="#22c55e" delay={0.05} inView={inView} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-10 sm:mb-14">
           {EDUCATION.map((edu, i) => (
-            <EduCard key={edu.title} edu={edu} index={i} inView={inView} />
+            <EduCard key={edu.key} edu={edu} index={i} inView={inView}
+              title={t(`certifications.edu.${edu.key}.title`)}
+              place={t(`certifications.edu.${edu.key}.place`)}
+              period={t(`certifications.edu.${edu.key}.period`)}
+              diplomaLabel={t('certifications.download_diploma')} />
           ))}
         </div>
 
-        {/* ── Experiencia ──────────────────────────────────────────────── */}
-        <SectionLabel icon={HiBriefcase} label="Experiencia Profesional" color="#00d4ff" delay={0.1} inView={inView} />
+        {/* ── SENNOVA ──────────────────────────────────────────────────── */}
+        <SectionLabel icon={HiBriefcase} label={t('certifications.sennova_title')} color="#00d4ff" delay={0.1} inView={inView} />
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -291,42 +249,26 @@ export default function Certifications() {
             <div className="absolute left-0 top-6 bottom-6 w-[3px] rounded-full bg-gradient-to-b from-accent-cyan via-accent-cyan/40 to-transparent" />
 
             <div className="relative z-10 pl-4">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
-                <div>
-                  <h4 className="font-heading font-bold text-lg text-text-primary">Desarrollador de Software</h4>
-                  <p className="text-text-secondary text-sm mt-0.5">SENA Regional Bolívar — <span className="text-accent-cyan font-semibold">SENNOVA</span></p>
-                </div>
-                <span className="text-xs font-mono px-3 py-1.5 rounded-full bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 whitespace-nowrap self-start">
-                  Jul 2025 – Dic 2025
-                </span>
-              </div>
-
-              <ul className="space-y-3">
-                {EXPERIENCE_ITEMS.map((item, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: -8 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.3, delay: 0.18 + i * 0.05 }}
-                    className="flex items-start gap-3 text-text-secondary text-sm leading-relaxed"
-                  >
-                    <span className="w-5 h-5 rounded-md bg-accent-cyan/10 flex items-center justify-center flex-shrink-0 mt-0.5 text-[10px] font-bold text-accent-cyan">
-                      {i + 1}
-                    </span>
-                    {item}
-                  </motion.li>
+              <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                {t('certifications.sennova_desc')}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {t('certifications.sennova_tags', { returnObjects: true }).map((tag) => (
+                  <span key={tag} className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20">
+                    {tag}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </motion.div>
 
         {/* ── Certificaciones AWS ──────────────────────────────────────── */}
-        <SectionLabel icon={FaAws} label="Certificaciones AWS" color="#ff9900" delay={0.15} inView={inView} />
+        <SectionLabel icon={FaAws} label={t('certifications.aws_section_title')} color="#ff9900" delay={0.15} inView={inView} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {CERTS.map((cert, i) => (
-            <CertCard key={cert.title} cert={cert} index={i} inView={inView} />
+            <CertCard key={cert.key} cert={cert} index={i} inView={inView} t={t} />
           ))}
         </div>
       </div>

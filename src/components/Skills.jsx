@@ -5,6 +5,7 @@ import { SiReact, SiPython, SiMysql, SiNodedotjs, SiFigma, SiWordpress, SiTailwi
 import { HiLightningBolt, HiCog, HiCode, HiCloud, HiX } from 'react-icons/hi'
 import AnimatedTitle from './AnimatedTitle'
 import { FaAws } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 
 /* ─── Datos ─────────────────────────────────────────────────────────────── */
 const CATEGORIES = ['Frontend', 'Backend', 'Cloud & DevOps', 'Datos', 'Automatización', 'Herramientas']
@@ -63,7 +64,7 @@ const SKILLS = [
 ]
 
 /* ─── Tarjeta con hover effects (CSS-only, sin animaciones infinitas) ── */
-function TiltCard({ skill, index, inView, onSelect }) {
+function TiltCard({ skill, index, inView, onSelect, t }) {
   const Icon = skill.icon
 
   return (
@@ -120,7 +121,7 @@ function TiltCard({ skill, index, inView, onSelect }) {
 
           {/* CTA */}
           <span className="relative z-10 mt-1 flex items-center gap-1 text-[11px] text-text-muted opacity-0 group-hover:opacity-80 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-            ver más <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+            {t('skills.viewMore')} <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
           </span>
         </div>
       </div>
@@ -129,7 +130,7 @@ function TiltCard({ skill, index, inView, onSelect }) {
 }
 
 /* ─── Modal de detalle ─────────────────────────────────────────────────── */
-function SkillModal({ skill, onClose }) {
+function SkillModal({ skill, onClose, t }) {
   const Icon = skill.icon
   return (
     <motion.div
@@ -145,7 +146,7 @@ function SkillModal({ skill, onClose }) {
         exit={{ opacity: 0, scale: 0.75, rotateX: -12 }}
         transition={{ type: 'spring', damping: 22, stiffness: 280 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative bg-bg-card border border-white/[0.08] rounded-2xl sm:rounded-3xl max-w-[90vw] sm:max-w-sm w-full p-5 sm:p-8 overflow-hidden"
+        className="relative bg-bg-card border border-glass-border rounded-2xl sm:rounded-3xl max-w-[90vw] sm:max-w-sm w-full p-5 sm:p-8 overflow-hidden"
       >
         {/* Glows */}
         <motion.div
@@ -165,8 +166,8 @@ function SkillModal({ skill, onClose }) {
 
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-xl hover:bg-white/10 transition-colors text-text-muted hover:text-text-primary z-10"
-          aria-label="Cerrar"
+          className="absolute top-5 right-5 p-2 rounded-xl hover:bg-bg-card-alt transition-colors text-text-muted hover:text-text-primary z-10"
+          aria-label={t('skills.close')}
         >
           <HiX size={18} />
         </button>
@@ -212,7 +213,7 @@ function SkillModal({ skill, onClose }) {
             transition={{ delay: 0.25 }}
             className="text-text-secondary text-sm leading-relaxed text-center"
           >
-            {skill.desc}
+            {t(`skills.descs.${skill.name}`)}
           </motion.p>
         </div>
       </motion.div>
@@ -225,6 +226,7 @@ export default function Skills() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true })
   const [selected, setSelected] = useState(null)
   const [filter, setFilter] = useState('Frontend')
+  const { t } = useTranslation()
 
   const filtered = SKILLS.filter((s) => s.cat === filter)
 
@@ -244,12 +246,12 @@ export default function Skills() {
           transition={{ duration: 0.3 }}
           className="mb-10"
         >
-          <span className="section-tag">// tech_stack.json</span>
+          <span className="section-tag">{t('skills.tag')}</span>
           <AnimatedTitle className="section-title">
-            Mi <span className="accent-text">stack</span> técnico
+            {t('skills.title1')}<span className="accent-text">{t('skills.title2')}</span>{t('skills.title3')}
           </AnimatedTitle>
           <p className="section-subtitle mt-3">
-            Herramientas con las que construyo a diario — dale click a cualquiera para ver qué hago con ella.
+            {t('skills.subtitle')}
           </p>
         </motion.div>
 
@@ -269,7 +271,7 @@ export default function Skills() {
               className={`relative px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 overflow-hidden
                 ${filter === cat
                   ? 'bg-accent-cyan text-bg-primary shadow-glow-cyan'
-                  : 'bg-white/[0.04] text-text-secondary border border-white/[0.08] hover:bg-white/[0.08] hover:text-text-primary'
+                  : 'bg-glass-bg text-text-secondary border border-glass-border hover:bg-bg-card-alt hover:text-text-primary'
                 }`}
             >
               {filter === cat && (
@@ -279,7 +281,7 @@ export default function Skills() {
                   transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                 />
               )}
-              <span className="relative z-10">{cat}</span>
+              <span className="relative z-10">{t(`skills.cats.${cat}`)}</span>
             </motion.button>
           ))}
         </motion.div>
@@ -296,7 +298,7 @@ export default function Skills() {
               className="col-span-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"
             >
               {filtered.map((skill, i) => (
-                <TiltCard key={skill.name} skill={skill} index={i} inView={true} onSelect={setSelected} />
+                <TiltCard key={skill.name} skill={skill} index={i} inView={true} onSelect={setSelected} t={t} />
               ))}
             </motion.div>
           </AnimatePresence>
@@ -305,7 +307,7 @@ export default function Skills() {
 
       {/* Modal */}
       <AnimatePresence>
-        {selected && <SkillModal skill={selected} onClose={() => setSelected(null)} />}
+        {selected && <SkillModal skill={selected} onClose={() => setSelected(null)} t={t} />}
       </AnimatePresence>
     </section>
   )

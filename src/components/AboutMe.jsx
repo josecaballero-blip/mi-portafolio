@@ -2,30 +2,17 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { HiLocationMarker, HiCode, HiLightningBolt, HiHeart } from 'react-icons/hi'
 import AnimatedTitle from './AnimatedTitle'
+import { useTranslation } from 'react-i18next'
 
-const HIGHLIGHTS = [
-  {
-    icon:  HiCode,
-    color: '#00d4ff',
-    title: 'Full-Stack Developer',
-    text:  'Trabajo con React, Node.js y Python para construir aplicaciones completas, desde el frontend hasta la base de datos.',
-  },
-  {
-    icon:  HiLightningBolt,
-    color: '#ff9900',
-    title: 'Automatización',
-    text:  'Me apasiona automatizar procesos con n8n y Make.com para que las empresas dejen de perder tiempo en tareas repetitivas.',
-  },
-  {
-    icon:  HiHeart,
-    color: '#8b5cf6',
-    title: 'Siempre aprendiendo',
-    text:  'Certificado en AWS, siempre buscando nuevas tecnologías y mejores formas de resolver problemas reales.',
-  },
+const HIGHLIGHT_ICONS = [
+  { icon: HiCode,          color: '#00d4ff', key: 'h1' },
+  { icon: HiLightningBolt, color: '#ff9900', key: 'h2' },
+  { icon: HiHeart,         color: '#8b5cf6', key: 'h3' },
 ]
 
 export default function AboutMe() {
   const { ref, inView } = useInView({ threshold: 0.08, triggerOnce: true })
+  const { t } = useTranslation()
 
   return (
     <section id="sobre-mi" className="py-16 sm:py-28 relative overflow-hidden" ref={ref}>
@@ -42,9 +29,9 @@ export default function AboutMe() {
           transition={{ duration: 0.3 }}
           className="mb-14 text-center"
         >
-          <span className="section-tag">// sobre.mi</span>
+          <span className="section-tag">{t('about.tag')}</span>
           <AnimatedTitle className="section-title">
-            Sobre <span className="accent-text">mí</span>
+            {t('about.title1')}<span className="accent-text">{t('about.title2')}</span>
           </AnimatedTitle>
         </motion.div>
 
@@ -73,27 +60,27 @@ export default function AboutMe() {
                 <div className="relative z-10 space-y-4">
                   <div className="flex items-center gap-2 text-text-muted text-sm">
                     <HiLocationMarker className="text-accent-cyan" />
-                    Cartagena, Colombia
+                    {t('about.location')}
                   </div>
 
                   <p className="text-text-secondary text-[15px] leading-relaxed">
-                    Tengo <span className="text-accent-cyan font-semibold">21 años</span> y soy 
-                    de Cartagena de Indias. Desde joven me interesé por la tecnología y 
-                    comencé a explorar el desarrollo de software por cuenta propia, lo que 
-                    rápidamente se convirtió en mi pasión.
+                    {t('about.p1', { defaultValue: t('about.p1') }).split('<1>').map((part, i) => {
+                      if (i === 0) return part
+                      const [highlight, rest] = part.split('</1>')
+                      return <span key={i}><span className="text-accent-cyan font-semibold">{highlight}</span>{rest}</span>
+                    })}
                   </p>
 
                   <p className="text-text-secondary text-[15px] leading-relaxed">
-                    Me formé en el <span className="text-text-primary font-medium">SENA</span> como 
-                    Tecnólogo en Análisis y Desarrollo de Software, trabajando en proyectos 
-                    reales con equipos multidisciplinarios que fortalecieron mis habilidades 
-                    técnicas y colaborativas.
+                    {t('about.p2', { defaultValue: t('about.p2') }).split('<1>').map((part, i) => {
+                      if (i === 0) return part
+                      const [highlight, rest] = part.split('</1>')
+                      return <span key={i}><span className="text-text-primary font-medium">{highlight}</span>{rest}</span>
+                    })}
                   </p>
 
                   <p className="text-text-secondary text-[15px] leading-relaxed">
-                    Me motiva construir soluciones que optimicen procesos y generen impacto 
-                    real en la productividad de las personas. Eso es lo que impulsa mi 
-                    crecimiento y aprendizaje continuo.
+                    {t('about.p3')}
                   </p>
                 </div>
               </div>
@@ -102,11 +89,11 @@ export default function AboutMe() {
 
           {/* Columna derecha — cards de highlights */}
           <div className="lg:col-span-3 flex flex-col gap-3 sm:gap-5">
-            {HIGHLIGHTS.map((item, i) => {
+            {HIGHLIGHT_ICONS.map((item, i) => {
               const Icon = item.icon
               return (
                 <motion.div
-                  key={item.title}
+                  key={item.key}
                   initial={{ opacity: 0, y: 18 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.3, delay: 0.1 + i * 0.07 }}
@@ -135,8 +122,8 @@ export default function AboutMe() {
 
                     {/* Texto */}
                     <div className="relative z-10 flex-1 min-w-0">
-                      <h3 className="font-heading font-bold text-[15px] text-text-primary mb-1">{item.title}</h3>
-                      <p className="text-text-muted text-sm leading-relaxed">{item.text}</p>
+                      <h3 className="font-heading font-bold text-[15px] text-text-primary mb-1">{t(`about.${item.key}`)}</h3>
+                      <p className="text-text-muted text-sm leading-relaxed">{t(`about.${item.key}_desc`)}</p>
                     </div>
                   </div>
                 </motion.div>

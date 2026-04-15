@@ -2,20 +2,23 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
+import { useTranslation } from 'react-i18next'
+import LanguageSelector from './LanguageSelector'
 
 /* Links de navegación */
-const NAV_LINKS = [
-  { label: 'Sobre mí',       to: 'sobre-mi'       },
-  { label: 'Habilidades',    to: 'habilidades'     },
-  { label: 'Proyectos',      to: 'proyectos'       },
-  { label: 'Automatización', to: 'automatizacion'  },
-  { label: 'Certificaciones',to: 'certificaciones' },
-  { label: 'Contacto',       to: 'contacto'        },
+const NAV_KEYS = [
+  { key: 'about',          to: 'sobre-mi'       },
+  { key: 'skills',         to: 'habilidades'     },
+  { key: 'projects',       to: 'proyectos'       },
+  { key: 'automation',     to: 'automatizacion'  },
+  { key: 'certifications', to: 'certificaciones' },
+  { key: 'contact',        to: 'contacto'        },
 ]
 
 export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
+  const { t } = useTranslation()
 
   /* Detectar scroll para activar glassmorphism */
   useEffect(() => {
@@ -30,7 +33,7 @@ export default function Navbar() {
       animate={{ y: 0,   opacity: 1 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'glass shadow-[0_1px_0_rgba(255,255,255,0.05)]' : 'bg-transparent'
+        scrolled ? 'glass shadow-[0_1px_0_var(--border-base)]' : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -50,7 +53,7 @@ export default function Navbar() {
 
         {/* Navegación desktop */}
         <ul className="hidden md:flex items-center gap-5 lg:gap-8">
-          {NAV_LINKS.map((link) => (
+          {NAV_KEYS.map((link) => (
             <li key={link.to}>
               <Link
                 to={link.to}
@@ -61,7 +64,7 @@ export default function Navbar() {
                 activeClass="!text-accent-cyan"
                 className="relative text-text-secondary text-sm font-medium hover:text-text-primary cursor-pointer transition-colors duration-200 group"
               >
-                {link.label}
+                {t(`nav.${link.key}`)}
                 {/* Línea subrayado animada */}
                 <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-accent-cyan transition-all duration-300 group-hover:w-full" />
               </Link>
@@ -69,23 +72,27 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA desktop */}
-        <div className="hidden md:block">
+        {/* CTA desktop + theme toggle + language selector */}
+        <div className="hidden md:flex items-center gap-2">
+          <LanguageSelector />
           <Link to="contacto" smooth duration={600} offset={-64} className="cursor-pointer">
             <button className="btn-primary text-xs py-2 px-4">
-              Contactar
+              {t('nav.cta')}
             </button>
           </Link>
         </div>
 
-        {/* Botón hamburguesa (mobile) */}
-        <button
-          className="md:hidden p-1 text-text-secondary hover:text-text-primary transition-colors"
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Abrir menú"
-        >
-          {menuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
-        </button>
+        {/* Botón hamburguesa + theme toggle + lang (mobile) */}
+        <div className="md:hidden flex items-center gap-1">
+          <LanguageSelector />
+          <button
+            className="p-1 text-text-secondary hover:text-text-primary transition-colors"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Abrir menú"
+          >
+            {menuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Menú mobile con animación Framer Motion */}
@@ -97,10 +104,10 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.28, ease: 'easeInOut' }}
-            className="md:hidden glass border-t border-white/[0.06] overflow-hidden"
+            className="md:hidden glass border-t border-[var(--border-base)] overflow-hidden"
           >
             <ul className="px-4 sm:px-6 py-4 flex flex-col gap-3">
-              {NAV_LINKS.map((link) => (
+              {NAV_KEYS.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
@@ -112,7 +119,7 @@ export default function Navbar() {
                     onClick={() => setMenuOpen(false)}
                     className="text-text-secondary text-sm font-medium hover:text-text-primary cursor-pointer transition-colors duration-200 block py-0.5"
                   >
-                    {link.label}
+                    {t(`nav.${link.key}`)}
                   </Link>
                 </li>
               ))}

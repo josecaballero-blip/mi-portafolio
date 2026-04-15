@@ -6,19 +6,27 @@ export default {
       // ─── Tokens de Diseño ───────────────────────────────────────────────
       colors: {
         bg: {
-          primary:    '#080812',
-          secondary:  '#0f0f1a',
-          card:       '#13131e',
-          'card-alt': '#1a1a2a',
+          primary:    'var(--bg-primary)',
+          secondary:  'var(--bg-secondary)',
+          card:       'var(--bg-card)',
+          'card-alt': 'var(--bg-card-alt)',
         },
         accent: {
           cyan:   '#00d4ff',
           violet: '#8b5cf6',
         },
         text: {
-          primary:   '#e2e8f0',
-          secondary: '#94a3b8',
-          muted:     '#475569',
+          primary:   'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted:     'var(--text-muted)',
+        },
+        glass: {
+          bg:     'var(--glass-bg)',
+          border: 'var(--glass-border)',
+        },
+        border: {
+          base:  'var(--border-base)',
+          hover: 'var(--border-hover)',
         },
       },
       fontFamily: {
