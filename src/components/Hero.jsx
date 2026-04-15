@@ -100,10 +100,10 @@ export default function Hero() {
                   <HiArrowRight size={15} />
                 </button>
               </Link>
-              <button className="btn-secondary">
+              <a href="/HV_Jose_Caballero.pdf" download className="btn-secondary">
                 <HiDownload size={15} />
                 Descargar CV
-              </button>
+              </a>
             </div>
           </motion.div>
         </motion.div>
