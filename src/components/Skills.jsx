@@ -77,9 +77,9 @@ function TiltCard({ skill, index, inView, onSelect }) {
         onClick={() => onSelect(skill)}
         className="relative group cursor-pointer overflow-hidden rounded-2xl p-[1px] transition-transform duration-300 hover:scale-[1.03]"
       >
-        {/* Borde gradiente — solo visible en hover, sin rotate infinito */}
+        {/* Borde gradiente — brillo sutil permanente, más intenso en hover */}
         <div
-          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+          className="absolute inset-0 rounded-2xl opacity-30 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
           style={{
             background: `conic-gradient(from 135deg, transparent, ${skill.color}55, transparent, ${skill.color}35, transparent)`,
           }}
@@ -90,7 +90,7 @@ function TiltCard({ skill, index, inView, onSelect }) {
 
           {/* Radial glow */}
           <div
-            className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+            className="absolute inset-0 rounded-2xl opacity-20 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
             style={{ background: `radial-gradient(circle at 50% 30%, ${skill.color}18, transparent 70%)` }}
           />
 

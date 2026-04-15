@@ -178,7 +178,7 @@ function ProjectCard({ project, index, inView }) {
         >
           {/* Borde gradiente — solo visible en hover, sin rotate infinito */}
           <div
-            className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+            className="absolute inset-0 rounded-2xl opacity-30 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
             style={{
               background: `conic-gradient(from 135deg, transparent, ${project.color}55, transparent, ${project.color}35, transparent)`,
             }}
@@ -189,7 +189,7 @@ function ProjectCard({ project, index, inView }) {
 
             {/* Radial glow */}
             <div
-              className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+              className="absolute inset-0 rounded-2xl opacity-20 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
               style={{ background: `radial-gradient(circle at 50% 20%, ${project.color}12, transparent 70%)` }}
             />
 

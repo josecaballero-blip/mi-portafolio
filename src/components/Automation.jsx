@@ -44,7 +44,7 @@ function TiltServiceCard({ card, index, inView }) {
       <div className="relative group overflow-hidden rounded-2xl p-[1px] h-full transition-transform duration-300 hover:scale-[1.03]">
         {/* Borde gradiente — solo en hover, sin rotate */}
         <div
-          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+          className="absolute inset-0 rounded-2xl opacity-30 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
           style={{
             background: `conic-gradient(from 135deg, transparent, ${card.color}55, transparent, ${card.color}35, transparent)`,
           }}
@@ -54,7 +54,7 @@ function TiltServiceCard({ card, index, inView }) {
 
           {/* Glow */}
           <div
-            className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+            className="absolute inset-0 rounded-2xl opacity-20 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
             style={{ background: `radial-gradient(circle at 50% 20%, ${card.color}12, transparent 70%)` }}
           />
 
@@ -126,7 +126,7 @@ export default function Automation() {
             className="glass rounded-2xl p-4 sm:p-6 relative overflow-hidden group"
           >
             {/* Glow sutil */}
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            <div className="absolute inset-0 rounded-2xl opacity-20 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
               style={{ background: 'radial-gradient(circle at 50% 30%, rgba(0,212,255,0.06), transparent 70%)' }}
             />
 

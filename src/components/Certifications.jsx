@@ -99,14 +99,14 @@ function EduCard({ edu, index, inView }) {
     >
       {/* Borde sutil en hover */}
       <div
-        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        className="absolute inset-0 rounded-2xl opacity-30 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{ background: `conic-gradient(from 180deg, transparent, ${edu.color}40, transparent)` }}
       />
 
       <div className="relative bg-bg-card rounded-2xl p-4 sm:p-6 h-full">
         {/* Glow */}
         <div
-          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          className="absolute inset-0 rounded-2xl opacity-20 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{ background: `radial-gradient(circle at 30% 30%, ${edu.color}10, transparent 70%)` }}
         />
 
@@ -159,7 +159,7 @@ function CertCard({ cert, index, inView }) {
       <div className="relative group overflow-hidden rounded-2xl p-[1px] h-full transition-transform duration-300 hover:scale-[1.02]">
         {/* Borde gradiente — solo hover, sin rotate */}
         <div
-          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+          className="absolute inset-0 rounded-2xl opacity-30 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
           style={{
             background: `conic-gradient(from 135deg, transparent, ${cert.color}55, transparent, ${cert.color}35, transparent)`,
           }}
@@ -168,7 +168,7 @@ function CertCard({ cert, index, inView }) {
         <div className="relative bg-bg-card rounded-2xl p-4 sm:p-6 h-full flex flex-col gap-3 sm:gap-4">
           {/* Glow */}
           <div
-            className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+            className="absolute inset-0 rounded-2xl opacity-20 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
             style={{ background: `radial-gradient(circle at 50% 20%, ${cert.color}12, transparent 70%)` }}
           />
 
@@ -277,13 +277,13 @@ export default function Certifications() {
           className="group relative overflow-hidden rounded-2xl p-[1px] mb-14"
         >
           {/* Borde hover */}
-          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          <div className="absolute inset-0 rounded-2xl opacity-30 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
             style={{ background: 'conic-gradient(from 90deg, transparent, #00d4ff40, transparent)' }}
           />
 
           <div className="relative bg-bg-card rounded-2xl p-7">
             {/* Glow */}
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            <div className="absolute inset-0 rounded-2xl opacity-20 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
               style={{ background: 'radial-gradient(circle at 20% 30%, #00d4ff08, transparent 60%)' }}
             />
 
