@@ -5,7 +5,7 @@ import anime from 'animejs/lib/anime.es.js'
 /* ─── Datos de métricas ─────────────────────────────────────────────────── */
 const STATS = [
   { value: 4,  suffix: '+', label: 'Proyectos entregados'          },
-  { value: 6,  suffix: '',  label: 'Meses en SENNOVA'               },
+  { value: 6,  suffix: '',  label: 'Meses de Experiencia'            },
   { value: 4,  suffix: '',  label: 'Certificaciones AWS'            },
   { value: 3,  suffix: '',  label: 'Herramientas de automatización' },
 ]
