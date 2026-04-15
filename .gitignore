@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+.env.*.local
+.vercel
+*.log
+certificados/
+server/
+foto mia.jpg
+src/components/ScrollAnimate.jsx
+src/hooks/useAnime.js
